@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+
+<title>SSS</title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color:#00a6a3;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  border-radius: 3px;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 865px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 865px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+/* @media screen and (max-width: 865px) {
+  div.card {
+    display: none;
+  }
+} */
+
+
+@media (min-width:800px) {        
+    .container #mobile1 {         
+    display:none !important;     
+    } 
+} 
+
+@media (max-width:800px) {     
+    .container #mobile1 {     
+    display:block !important;           
+    width: 80%;
+    margin-left: 10%;
+
+    }       
+    .container #pc1{         
+    display:none !important;     
+    } 
+    .container #pc2{         
+    display:none !important;     
+    } 
+}
+@media (min-width:992px) {        
+            #mobile-navbar {         
+            display:none !important;     
+            }
+        } 
+
+        @media (max-width:991px) {     
+            #mobile-navbar {     
+            display:block !important; 
+            }       
+            #pc-navbar{         
+            display:none !important;     
+            } 
+        }
+
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 15px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 30px;
+            transition: 0.4s;
+          }
+
+          .active, .accordion:hover {
+            background-color: #ccc;
+          }
+
+          .accordion:after {
+            content: '\002B';
+            color: #777;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+          }
+
+          .active:after {
+            content: "\2212";
+          }
+
+          .panel {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+          }
+          /* Contact */
+        #contact{
+                color: #fff;
+                padding: 2rem;
+            }
+            #contact .contact-form{
+                width: 80%;
+                height: 20%;
+                margin: auto auto;
+                display: flex;
+                flex-direction: column;
+            }
+            #contact .contact-form ul{
+                list-style-type: none;
+                display: flex;
+                margin: 1rem;
+                align-self: center;
+            }
+            #contact .contact-form ul li a{
+              padding: 1rem;
+              font-size: 2rem;
+            }
+            #contact .contact-form ul li a:hover{
+                opacity: 0.8;
+            }
+</style>
+</head>
+<body>
+<header>
+    <div class="topnav" id="mobile-navbar">
+      
+      <a href="staj.html">Anasayfa</a>
+        
+      <a href="salgin_tarihcesi.html">Salgın Tarihçesi</a>
+
+      <a href="salgindan-nasil-korunulur.html">Salgından nasıl korunuruz ?</a>
+
+      <a href="sss.html">SSS</a>
+
+      <a href="videolar.html">Videolar</a>
+
+      <a href="brosur.html">Broşür</a>
+        
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>   
+    </div>
+</header>
+<nav id="pc-navbar" class="navbar navbar-dark navbar-expand-lg text-white " style="background-color:#00a6a3;">
+  <div class="container py-2">
+      <a href="staj.html" class="navbar-brand">Covid-19 Bilgilendirme Sayfası</a>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-covid" aria-controls="navbar-covid" 
+      aria-expanded="false" aria-haspopup="true">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse d-flex flex-row-reverse" id="navbar-covid">
+          <ul class="navbar-nav ml-auto ">
+              <li class="nav-item ">
+                  <a href="staj.html" class="nav-link text-white">Anasayfa</a>
+              </li>
+              <li class="nav-item ">
+                  <a href="/salgin_tarihcesi.html" class="nav-link text-white">Salgın Tarihçesi</a>
+              </li>
+              <li class="nav-item">
+                  <a href="salgindan-nasil-korunulur.html" class="nav-link text-white">Salgından nasıl korunuruz ?</a>
+              </li>
+              <li class="nav-item">
+                  <a href="sss.html" class="nav-link text-white">SSS</a>
+              </li>
+              <li class="nav-item">
+                  <a href="videolar.html" class="nav-link text-white">Videolar</a>
+              </li>
+              <li class="nav-item">
+                  <a href="brosur.html" class="nav-link text-white">Broşür</a>
+              </li>
+          </ul>
+      </div>
+  </div>
+</nav>
+
+<div class="text-center"style="position: relative; z-index: -1;">
+    <img src="images/korona3.jpg" alt="Responsive image" class="img-fluid">
+</div>
+
+<div class="container d-flex bg-white " style="margin-top: -30px; z-index: 1; border-radius: 4px;">
+  
+    <div id="pc1" class="p-2 w-100">
+        <br>
+            <article>
+              
+                <button class="accordion"> Coronavirüs (COVID-19) nedir? </button>
+                <div class="panel">
+                  <p>
+                    Coronavirüsler, hayvanlarda veya insanlarda hastalığa neden olabilecek büyük bir virüs ailesidir. 
+                Daha önce rastlanan birkaç coronavirüsün soğuk algınlığından Orta Doğu Solunum Sendromu (MERS) ve Şiddetli Akut Solunum 
+                Sendromu (SARS) gibi daha şiddetli hastalıklara kadar neden olduğu bilinmektedir. En son keşfedilen coronavirüs, 
+                COVID-19 hastalığına neden olur. Bu yeni virüs ve hastalık, salgının Aralık 2019'da Çin'in Wuhan kentinde başlamasından 
+                önce bilinmiyordu.
+                  </p>
+                </div>
+                <br>
+                <button class="accordion"> Coronavirüs (COVID-19) belirtileri nelerdir? </button>
+                <div class="panel">
+                  <p>
+                    COVID-19'un en yaygın semptomları ateş, yorgunluk ve kuru öksürüktür. Bazı hastalarda burun tıkanıklığı, burun akıntısı, boğaz ağrısı veya ishal olabilir. Bu semptomlar genellikle hafiftir ve yavaş yavaş başlar. Bazı insanlar enfekte olduğu halde herhangi bir semptom geliştirmeyebilirler. Çoğu insan (yaklaşık %80) özel tedaviye ihtiyaç duymadan hastalıktan iyileşir. COVID-19 alan her 6 kişiden yaklaşık 1'i ağır hastalanmakta ve nefes almakta güçlük çekmektedir. Yaşlı insanlar ve yüksek tansiyon, kalp problemleri veya diyabet gibi altta yatan tıbbi sorunları olanların ciddi hastalık geliştirme olasılığı daha yüksektir. Ateş, öksürük ve nefes almada zorluk çeken insanlar tıbbi yardım almalıdır.
+                  </p>
+                </div>
+                <br>
+                <button class="accordion"> Coronavirüs (COVID-19) tanısı nasıl konulur? </button>
+                <div class="panel">
+                  <p>
+                    SARS-CoV-2 virüsünün neden olduğu COVID-19 tanısı, direkt olarak virüsü saptamaya yönelik olarak yapılabildiği gibi, 
+                    konak organizmanın virüse karşı oluşturduğu spesifik antikorların gösterilmesi ile de yapılabilir. Bu doğrultuda 
+                    laboratuvarlarda kullanılan iki test kategorisi vardır. Bunlar &nbsp;virüsün kendisini tespit eden PCR testi ve konakçının 
+                    virüse verdiği yanıtı tespit eden antikor testidir. Ayrıca hastalığın tanısında akciğer tomografisi ve bazı kan tetkikleri 
+                    de kullanılmaktadır.
+                  </p>
+                </div>
+                <br>
+                <button class="accordion"> Coronavirus (COVID-19) antikor testi nedir? </button>
+                <div class="panel">
+                  <p>
+                    Antikorlar, bağışıklık sisteminin tehditleri tanımlamasına ve ortadan kaldırmasına yardımcı olan proteinlerdir. 
+                    Ayrıca vücudun gelecekteki enfeksiyonları aynı tehditten korumasına yardımcı olmaktadır. Serolojik testler, kişinin 
+                    SARS-CoV-2 virüsüne karşı yanıt olarak oluşturduğu proteinleri tespit etmektedir. Antikor testleri, COVID-19'dan iyileşen veya virüsü fark etmeden taşıyabilen hastalarda, virüs artık mevcut olmasa bile antikorları kimin taşıdığını gösterebilmektedir. 
+                  </p>
+                </div>
+                <br>
+                <button class="accordion"> Coronavirüsler nasıl bulaşır? </button>
+                <div class="panel">
+                  <p>
+                    Hastalık, kişiden kişiye, COVID-19'lu bir kişi öksürdüğünde veya nefes verdiğinde ortama yayılan küçük damlacıklardan veya ağızdan yayılabilir. Bu damlacıklar kişinin etrafındaki nesnelere ve yüzeylere düşer. Diğer insanlar bu nesnelere veya yüzeylere temas ettikten sonra gözlerine, burnuna veya ağzına dokunduğunda viruse yakalanırlar. İnsanlar ayrıca, COVID-19'lu damlacıkları öksüren veya nefes veren bir kişiden damlacıklar halinde nefes alırlarsa COVID-19 hastalığına yakalanabilirler. Bu yüzden hasta olan bir kişiden 1 metreden daha uzak mesafede durmak önemlidir. Bugüne kadar yapılan çalışmalar, COVID-19'a neden olan virüsün, esas olarak hava vasıtasından çok temas yoluyla bulaştığını göstermektedir.                  </p>
+                </div>
+                <br>
+                <button class="accordion"> COVID-19, şikayeti olmayan kişilerden bulaşabilir mi? </button>
+                <div class="panel">
+                  <p>
+                    COVID-19 olan birçok insan sadece hafif semptomlar yaşar. Bu özellikle hastalığın erken evrelerinde geçerlidir. Bu nedenle, COVID-19'u örneğin hafif bir öksürüğü olan ve hasta hissetmeyen birinden yakalamak mümkündür.</p>
+                </div>
+                <br>
+                <button class="accordion"> COVID-19’un grip ya da soğuk algınlığından farkı nasıl anlaşılır? </button>
+                <div class="panel">
+                  <p>
+                    2019-nCoV enfeksiyonunda, grip veya soğuk algınlığında olduğu gibi genellikle ateş, öksürük ve burun akıntısı gibi solunum şikayetleri görülür. Birçok yakınma benzer olsa da, bu hastalıklar farklı virüslerden kaynaklanır. Benzerlikleri nedeniyle, hastalığı sadece şikayetlere dayanarak tanımlamak zor olabilir. Bu yüzden birinin 2019-nCoV olup olmadığını doğrulamak için laboratuvar testleri gereklidir.                
+                  </p>
+                  </div>
+                <br>  
+
+              <button class="accordion"> Coronavirüsten nasıl korunurum? </button>
+              <div class="panel">
+                <p>
+                  Dünya Sağlık Örgütü'nün enfeksiyonun yayılmasını önlemek için standart önerileri arasında düzenli el yıkama, öksürme ve hapşırma sırasında ağız ve burnu tek kullanımlık bir mendil ya da dirsek içi ile kapatmak, ellerin göz, burun ve ağıza temasından kaçınmak yer alır. Virüsten korunmak için belirlenen standart önerilerin en başında el hijyeni gelir.&nbsp;<br>
+                
+                  <br>
+                  Öksürme ve hapşırma gibi solunum yolu rahatsızlığı belirtileri gösteren kişiler ile yakın temastan kaçınmak&nbsp; gerekir.&nbsp; Ateş, öksürük ve nefes darlığı olan kişiler erken tıbbi&nbsp; yardım almalı ve önceki seyahat geçmişi sağlık uzmanıyla paylaşılmalıdır. Yerel sağlık kurumunun talimatları izlenmelidir. COVID-19'un yaygın olarak yayıldığı şehirler veya yerel bölgelerden haberdar olunmalıdır. Mümkünse bu yerlere seyahat etmekten kaçınılmalıdır.<br>
+                  <br>
+                  Tıbbi maske takmak, bazı solunum yolu hastalıklarının yayılmasını sınırlamaya yardımcı olabilir. Bununla birlikte, tek başına maske kullanmak enfeksiyondan korunmayı garantilemez. El hijyeni dahil olmak üzere diğer önleme tedbirleri ile birleştirilmeli ve şüpheli ya da kesin tanı almış kişiler ile en az 1 metre mesafe olmalıdır.<br>
+                  <br>                </p>
+                </div>
+              
+                <br>
+                <button class="accordion"> Coronavirüs (COVID-19) tedavisi nasıl yapılır? </button>
+                <div class="panel">
+                  <p>
+                    Yeni tip Coronavirüs enfeksiyonu için spesifik tedavi mevcut değildir, antibiyotiklerin hastalığın önlenmesinde ya da 
+                    tedavisinde yeri yoktur. Tedavi hastanın şikayetlerine yönelik olan destek tedavisidir.                  </p>
+                  </div>
+
+                 <br>
+
+
+                 <button class="accordion"> Coronavirüs (COVID-19) aşısı bulundu mu? </button>
+                 <div class="panel">
+                   <p>
+                    Yeni tip Coronavirüs enfeksiyonu için çalışmalar sürüyor ve denekler üzerinde deneniyor.<br>                   </p>
+                  </div>
+                  <br>
+
+                 <button class="accordion"> COVID-19 hastalığına karşı nasıl beslenilmedir? </button>
+                 <div class="panel">
+                   <p>
+                    Pandemi döneminde, bağışıklık sistemini güçlendirici şekilde beslenme düzeninde değişiklik yapılmalıdır. Dünya Sağlık 
+                    Örgütü günde ortalama 5 ile 8 porsiyon arasında meyve ve sebze tüketimini önermektedir. Bağışıklık sisteminin özellikle 
+                    güçlü tutulması gereken bu dönemde, bahsedilen bu miktarı biraz daha artırmanızı öneriyoruz.                 
+                  </div>
+                  <br>
+
+                 <button class="accordion"> Coronavirus (COVID-19) kuluçka süresi ne kadardır? </button>
+                 <div class="panel">
+                   <p>
+                    Kuluçka dönemi, virüsü yakalama ile hastalığın belirtilerini göstermeye başlama arasındaki zaman anlamına gelir. COVID-19 
+                    için kuluçka döneminin çoğu tahmini 1-14 gün arasında, en yaygın olarak 5 gündür.                
+                  </div>
+                  <br>
+
+                 <button class="accordion"> COVID-19 evcil hayvanlardan bulaşır mı? </button>
+                 <div class="panel">
+                   <p>
+                    Yeni tip coronavirüsün hayvan kaynağı henüz tanımlanmadı. Ancak bu, herhangi bir hayvandan veya evcil hayvanlardan 2019-nCoV 
+                    bulaşabileceği anlamına gelmez. Kediler ve köpekler gibi evcil hayvanların 2019-nCoV ile enfekte olduğuna veya virüsün bu 
+                    hayvanlar arasında yayıldığına dair&nbsp; hiçbir kanıt yoktur. 
+                    </p>             
+                  </div>
+                  <br>
+
+                 <button class="accordion"> COVID-19 hastalığına neden olan virüs, cansız yüzeylerde ne kadar süre yaşayabilir? </button>
+                 <div class="panel">
+                   <p>
+                    COVID-19'a neden olan virüsün yüzeylerde ne kadar süre hayatta kaldığı kesin değildir, ancak diğer coronavirüsler gibi 
+                    davranmaktadır. Çalışmalar, coronavirüslerin yüzeylerde birkaç saat veya birkaç güne kadar devam edebileceğini göstermektedir. 
+                    Bu, farklı koşullar altında değişebilir (örn. yüzey tipi, ortam sıcaklığı veya nemi). 
+                  </p>          
+                  </div>
+                  <br>
+
+                 <button class="accordion"> COVID-19 hastalığı&nbsp;kargo paketleri ile bulaşır mı? </button>
+                 <div class="panel">
+                   <p>
+                    Diğer coronavirüslerle olan deneyimlerden, bu tür virüslerin zarf veya paket gibi nesnelerde uzun süre hayatta kalamadığı tespit edilmiştir. 
+                  </p>          
+                  </div>
+                  <br>
+
+                 <button class="accordion"> COVID-19 döneminde zatürre ve grip aşısını kimler yaptırmalıdır? </button>
+                 <div class="panel">
+                   <p>
+                    Özellikle yaşlılık döneminde yapılması önerilen iki aşı pnömokok (zatürre) ve influenza (grip) aşılarıdır. Ayrıca yaşlıların aşıyla önlenebilir hastalıklar ve komplikasyonlarından korunabilmesi için çevrelerindeki bireylerin de mutlaka aşılanmaları önerilmektedir. Toplumda aşılanma yüzdesi arttıkça, hastalıkların görülme ve yayılma oranları da göreceli olarak düşer.&nbsp;<br>
+                    <br>
+                    Bu iki aşı SARS virüslerinden korumasa da, SARS virüsünden etkilenenlerin yaşayacakları karışıklıkları engellemek için kullanılacak bir koruma faktörü olarak öne çıkmaktadır. Özellikle influenza virüsü, bizleri SARS nedeniyle şaşırtacak ve ikisinin ayrımını yapmak zor olacaktır. Bu nedenle aşılamanın yaygın yapılması büyük önem taşımaktadır.<br>                  </p>          
+                  </div>
+                  <br>
+
+                 <button class="accordion"> Koronavirüs hastalığının (COVID-19) hamileler üzerindeki etkileri nelerdir? </button>
+                 <div class="panel">
+                   <p>
+                    Tüm dünyayı etkisi altına alan COVID-19 virüsünün yeni bir enfeksiyon olması sebebiyle gebelik ve bebek üzerindeki etkileri bilinmiyor. Daha önceki SARS ve MERS enfeksiyonlarından elde edilen bilgiler, coronavirüs enfeksiyonunun gebeliğin ilk altı ayında bebek üzerinde olumsuz bir etki yaratmadığını gösteriyor. Ancak gebeliğin son 3 ayında, anne COVID-19 enfeksiyonu geçirirse birtakım riskler oluşabileceği hakkında çalışmalar yayınlanıyor.
+                    
+                  </p>          
+                  </div>
+                  <br>
+
+                 <button class="accordion"> COVID-19 kalp hastalarını nasıl etkiler? </button>
+                 <div class="panel">
+                   <p>
+                    Kalp ve damar hastaları virüsün kalbe bindirdiği yükten dolayı ciddi risk altındadır. COVID-19’a karşı kalp ve hipertansiyon hastalarının, kalp damar hastalığı olanların hijyen koşullarına dikkat etmeleri gerekirken, mümkün olduğunca kendilerini evde izole etmeleri gerekiyor. Hastaların ilaçlarını aksatmadan kullanmaları gerekmektedir. Tansiyonlarını ve şekerlerini kontrol altında tutmalılar.
+
+                  </p>          
+                  </div>
+                  <br>
+
+                 <button class="accordion"> Pandemi sürecinde psikolojimizi korumak için nelere dikkat etmeliyiz? </button>
+                 <div class="panel">
+                   <p>
+                    Her insan stresli durumlara kişisel özellikleri, travmatik deneyimleri ve içinde bulunduğu şartlar dahilinde farklı tepkiler verebilir. Belirsizlik herkes için ciddi bir problem. Her şeyi kontrol edemeyiz. Öncelikle kontrol edebileceğimiz noktalardaki tüm önlemleri aldığımıza emin olmalıyız. Unutmamamız gereken en önemli şey kaygı ve paniğin virüsten daha bulaşıcı olduğudur.
+
+                  </p>          
+                  </div>
+                  <br>
+
+                  
+            </article>
+    </div>
+
+   
+
+    <div id="mobile1">
+        <br>
+        <article>
+              
+          <button class="accordion"><h5 >Coronavirüs (COVID-19) nedir?</h5></button>
+          <div class="panel">
+            <p>
+              Coronavirüsler, hayvanlarda veya insanlarda hastalığa neden olabilecek büyük bir virüs ailesidir. 
+          Daha önce rastlanan birkaç coronavirüsün soğuk algınlığından Orta Doğu Solunum Sendromu (MERS) ve Şiddetli Akut Solunum 
+          Sendromu (SARS) gibi daha şiddetli hastalıklara kadar neden olduğu bilinmektedir. En son keşfedilen coronavirüs, 
+          COVID-19 hastalığına neden olur. Bu yeni virüs ve hastalık, salgının Aralık 2019'da Çin'in Wuhan kentinde başlamasından 
+          önce bilinmiyordu.
+            </p>
+          </div>
+          <br>
+          <button class="accordion"><h5  >Coronavirüs (COVID-19) belirtileri nelerdir?</h5></button>
+          <div class="panel">
+            <p>
+              COVID-19'un en yaygın semptomları ateş, yorgunluk ve kuru öksürüktür. Bazı hastalarda burun tıkanıklığı, burun akıntısı, boğaz ağrısı veya ishal olabilir. Bu semptomlar genellikle hafiftir ve yavaş yavaş başlar. Bazı insanlar enfekte olduğu halde herhangi bir semptom geliştirmeyebilirler. Çoğu insan (yaklaşık %80) özel tedaviye ihtiyaç duymadan hastalıktan iyileşir. COVID-19 alan her 6 kişiden yaklaşık 1'i ağır hastalanmakta ve nefes almakta güçlük çekmektedir. Yaşlı insanlar ve yüksek tansiyon, kalp problemleri veya diyabet gibi altta yatan tıbbi sorunları olanların ciddi hastalık geliştirme olasılığı daha yüksektir. Ateş, öksürük ve nefes almada zorluk çeken insanlar tıbbi yardım almalıdır.
+            </p>
+          </div>
+          <br>
+          <button class="accordion"><h5  >Coronavirüs (COVID-19) tanısı nasıl konulur?</h5></button>
+          <div class="panel">
+            <p>
+              SARS-CoV-2 virüsünün neden olduğu COVID-19 tanısı, direkt olarak virüsü saptamaya yönelik olarak yapılabildiği gibi, 
+              konak organizmanın virüse karşı oluşturduğu spesifik antikorların gösterilmesi ile de yapılabilir. Bu doğrultuda 
+              laboratuvarlarda kullanılan iki test kategorisi vardır. Bunlar &nbsp;virüsün kendisini tespit eden PCR testi ve konakçının 
+              virüse verdiği yanıtı tespit eden antikor testidir. Ayrıca hastalığın tanısında akciğer tomografisi ve bazı kan tetkikleri 
+              de kullanılmaktadır.
+            </p>
+          </div>
+          <br>
+          <button class="accordion"><h5  >Coronavirus (COVID-19) antikor testi nedir?</h5></button>
+          <div class="panel">
+            <p>
+              Antikorlar, bağışıklık sisteminin tehditleri tanımlamasına ve ortadan kaldırmasına yardımcı olan proteinlerdir. 
+              Ayrıca vücudun gelecekteki enfeksiyonları aynı tehditten korumasına yardımcı olmaktadır. Serolojik testler, kişinin 
+              SARS-CoV-2 virüsüne karşı yanıt olarak oluşturduğu proteinleri tespit etmektedir. Antikor testleri, COVID-19'dan iyileşen veya virüsü fark etmeden taşıyabilen hastalarda, virüs artık mevcut olmasa bile antikorları kimin taşıdığını gösterebilmektedir. 
+            </p>
+          </div>
+          <br>
+          <button class="accordion"><h5  >Coronavirüsler nasıl bulaşır?</h5></button>
+          <div class="panel">
+            <p>
+              Hastalık, kişiden kişiye, COVID-19'lu bir kişi öksürdüğünde veya nefes verdiğinde ortama yayılan küçük damlacıklardan veya ağızdan yayılabilir. Bu damlacıklar kişinin etrafındaki nesnelere ve yüzeylere düşer. Diğer insanlar bu nesnelere veya yüzeylere temas ettikten sonra gözlerine, burnuna veya ağzına dokunduğunda viruse yakalanırlar. İnsanlar ayrıca, COVID-19'lu damlacıkları öksüren veya nefes veren bir kişiden damlacıklar halinde nefes alırlarsa COVID-19 hastalığına yakalanabilirler. Bu yüzden hasta olan bir kişiden 1 metreden daha uzak mesafede durmak önemlidir. Bugüne kadar yapılan çalışmalar, COVID-19'a neden olan virüsün, esas olarak hava vasıtasından çok temas yoluyla bulaştığını göstermektedir.                  </p>
+          </div>
+          <br>
+          <button class="accordion"><h5 >COVID-19, şikayeti olmayan kişilerden bulaşabilir mi?</h5></button>
+          <div class="panel">
+            <p>
+              COVID-19 olan birçok insan sadece hafif semptomlar yaşar. Bu özellikle hastalığın erken evrelerinde geçerlidir. Bu nedenle, COVID-19'u örneğin hafif bir öksürüğü olan ve hasta hissetmeyen birinden yakalamak mümkündür.</p>
+          </div>
+          <br>
+          <button class="accordion"><h5 >COVID-19’un grip ya da soğuk algınlığından farkı nasıl anlaşılır?</h5></button>
+          <div class="panel">
+            <p>
+              2019-nCoV enfeksiyonunda, grip veya soğuk algınlığında olduğu gibi genellikle ateş, öksürük ve burun akıntısı gibi solunum şikayetleri görülür. Birçok yakınma benzer olsa da, bu hastalıklar farklı virüslerden kaynaklanır. Benzerlikleri nedeniyle, hastalığı sadece şikayetlere dayanarak tanımlamak zor olabilir. Bu yüzden birinin 2019-nCoV olup olmadığını doğrulamak için laboratuvar testleri gereklidir.                
+            </p>
+            </div>
+          <br>  
+
+        <button class="accordion"><h5 >Coronavirüsten nasıl korunurum?</h5></button>
+        <div class="panel">
+          <p>
+            Dünya Sağlık Örgütü'nün enfeksiyonun yayılmasını önlemek için standart önerileri arasında düzenli el yıkama, öksürme ve hapşırma sırasında ağız ve burnu tek kullanımlık bir mendil ya da dirsek içi ile kapatmak, ellerin göz, burun ve ağıza temasından kaçınmak yer alır. Virüsten korunmak için belirlenen standart önerilerin en başında el hijyeni gelir.&nbsp;<br>
+          
+            <br>
+            Öksürme ve hapşırma gibi solunum yolu rahatsızlığı belirtileri gösteren kişiler ile yakın temastan kaçınmak&nbsp; gerekir.&nbsp; Ateş, öksürük ve nefes darlığı olan kişiler erken tıbbi&nbsp; yardım almalı ve önceki seyahat geçmişi sağlık uzmanıyla paylaşılmalıdır. Yerel sağlık kurumunun talimatları izlenmelidir. COVID-19'un yaygın olarak yayıldığı şehirler veya yerel bölgelerden haberdar olunmalıdır. Mümkünse bu yerlere seyahat etmekten kaçınılmalıdır.<br>
+            <br>
+            Tıbbi maske takmak, bazı solunum yolu hastalıklarının yayılmasını sınırlamaya yardımcı olabilir. Bununla birlikte, tek başına maske kullanmak enfeksiyondan korunmayı garantilemez. El hijyeni dahil olmak üzere diğer önleme tedbirleri ile birleştirilmeli ve şüpheli ya da kesin tanı almış kişiler ile en az 1 metre mesafe olmalıdır.<br>
+            <br>                </p>
+          </div>
+        
+          <br>
+          <button class="accordion"><h5 >Coronavirüs (COVID-19) tedavisi nasıl yapılır?</h5></button>
+          <div class="panel">
+            <p>
+              Yeni tip Coronavirüs enfeksiyonu için spesifik tedavi mevcut değildir, antibiyotiklerin hastalığın önlenmesinde ya da 
+              tedavisinde yeri yoktur. Tedavi hastanın şikayetlerine yönelik olan destek tedavisidir.                  </p>
+            </div>
+
+           <br>
+
+
+           <button class="accordion"><h5 >Coronavirüs (COVID-19) aşısı bulundu mu?</h5></button>
+           <div class="panel">
+             <p>
+              Yeni tip Coronavirüs enfeksiyonu için çalışmalar sürüyor ve denekler üzerinde deneniyor.<br>                   </p>
+            </div>
+            <br>
+
+           <button class="accordion"><h5 >COVID-19 hastalığına karşı nasıl beslenilmedir?</h5></button>
+           <div class="panel">
+             <p>
+              Pandemi döneminde, bağışıklık sistemini güçlendirici şekilde beslenme düzeninde değişiklik yapılmalıdır. Dünya Sağlık 
+              Örgütü günde ortalama 5 ile 8 porsiyon arasında meyve ve sebze tüketimini önermektedir. Bağışıklık sisteminin özellikle 
+              güçlü tutulması gereken bu dönemde, bahsedilen bu miktarı biraz daha artırmanızı öneriyoruz.                 
+            </div>
+            <br>
+
+           <button class="accordion"><h5 >Coronavirus (COVID-19) kuluçka süresi ne kadardır?</h5></button>
+           <div class="panel">
+             <p>
+              Kuluçka dönemi, virüsü yakalama ile hastalığın belirtilerini göstermeye başlama arasındaki zaman anlamına gelir. COVID-19 
+              için kuluçka döneminin çoğu tahmini 1-14 gün arasında, en yaygın olarak 5 gündür.                
+            </div>
+            <br>
+
+           <button class="accordion"><h5 >COVID-19 evcil hayvanlardan bulaşır mı?</h5></button>
+           <div class="panel">
+             <p>
+              Yeni tip coronavirüsün hayvan kaynağı henüz tanımlanmadı. Ancak bu, herhangi bir hayvandan veya evcil hayvanlardan 2019-nCoV 
+              bulaşabileceği anlamına gelmez. Kediler ve köpekler gibi evcil hayvanların 2019-nCoV ile enfekte olduğuna veya virüsün bu 
+              hayvanlar arasında yayıldığına dair&nbsp; hiçbir kanıt yoktur. 
+              </p>             
+            </div>
+            <br>
+
+           <button class="accordion"><h5 >COVID-19 hastalığına neden olan virüs, cansız yüzeylerde ne kadar süre yaşayabilir?</h5></button>
+           <div class="panel">
+             <p>
+              COVID-19'a neden olan virüsün yüzeylerde ne kadar süre hayatta kaldığı kesin değildir, ancak diğer coronavirüsler gibi 
+              davranmaktadır. Çalışmalar, coronavirüslerin yüzeylerde birkaç saat veya birkaç güne kadar devam edebileceğini göstermektedir. 
+              Bu, farklı koşullar altında değişebilir (örn. yüzey tipi, ortam sıcaklığı veya nemi). 
+            </p>          
+            </div>
+            <br>
+
+           <button class="accordion"><h5 >COVID-19 hastalığı&nbsp;kargo paketleri ile bulaşır mı?</h5></button>
+           <div class="panel">
+             <p>
+              Diğer coronavirüslerle olan deneyimlerden, bu tür virüslerin zarf veya paket gibi nesnelerde uzun süre hayatta kalamadığı tespit edilmiştir. 
+            </p>          
+            </div>
+            <br>
+
+           <button class="accordion"><h5 >COVID-19 döneminde zatürre ve grip aşısını kimler yaptırmalıdır?</h5></button>
+           <div class="panel">
+             <p>
+              Özellikle yaşlılık döneminde yapılması önerilen iki aşı pnömokok (zatürre) ve influenza (grip) aşılarıdır. Ayrıca yaşlıların aşıyla önlenebilir hastalıklar ve komplikasyonlarından korunabilmesi için çevrelerindeki bireylerin de mutlaka aşılanmaları önerilmektedir. Toplumda aşılanma yüzdesi arttıkça, hastalıkların görülme ve yayılma oranları da göreceli olarak düşer.&nbsp;<br>
+              <br>
+              Bu iki aşı SARS virüslerinden korumasa da, SARS virüsünden etkilenenlerin yaşayacakları karışıklıkları engellemek için kullanılacak bir koruma faktörü olarak öne çıkmaktadır. Özellikle influenza virüsü, bizleri SARS nedeniyle şaşırtacak ve ikisinin ayrımını yapmak zor olacaktır. Bu nedenle aşılamanın yaygın yapılması büyük önem taşımaktadır.<br>                  </p>          
+            </div>
+            <br>
+
+           <button class="accordion"><h5 >Koronavirüs hastalığının (COVID-19) hamileler üzerindeki etkileri nelerdir?</h5></button>
+           <div class="panel">
+             <p>
+              Tüm dünyayı etkisi altına alan COVID-19 virüsünün yeni bir enfeksiyon olması sebebiyle gebelik ve bebek üzerindeki etkileri bilinmiyor. Daha önceki SARS ve MERS enfeksiyonlarından elde edilen bilgiler, coronavirüs enfeksiyonunun gebeliğin ilk altı ayında bebek üzerinde olumsuz bir etki yaratmadığını gösteriyor. Ancak gebeliğin son 3 ayında, anne COVID-19 enfeksiyonu geçirirse birtakım riskler oluşabileceği hakkında çalışmalar yayınlanıyor.
+              
+            </p>          
+            </div>
+            <br>
+
+           <button class="accordion"><h5 >COVID-19 kalp hastalarını nasıl etkiler?</h5></button>
+           <div class="panel">
+             <p>
+              Kalp ve damar hastaları virüsün kalbe bindirdiği yükten dolayı ciddi risk altındadır. COVID-19’a karşı kalp ve hipertansiyon hastalarının, kalp damar hastalığı olanların hijyen koşullarına dikkat etmeleri gerekirken, mümkün olduğunca kendilerini evde izole etmeleri gerekiyor. Hastaların ilaçlarını aksatmadan kullanmaları gerekmektedir. Tansiyonlarını ve şekerlerini kontrol altında tutmalılar.
+
+            </p>          
+            </div>
+            <br>
+
+           <button class="accordion"><h5 >Pandemi sürecinde psikolojimizi korumak için nelere dikkat etmeliyiz?</h5></button>
+           <div class="panel">
+             <p>
+              Her insan stresli durumlara kişisel özellikleri, travmatik deneyimleri ve içinde bulunduğu şartlar dahilinde farklı tepkiler verebilir. Belirsizlik herkes için ciddi bir problem. Her şeyi kontrol edemeyiz. Öncelikle kontrol edebileceğimiz noktalardaki tüm önlemleri aldığımıza emin olmalıyız. Unutmamamız gereken en önemli şey kaygı ve paniğin virüsten daha bulaşıcı olduğudur.
+
+            </p>          
+            </div>
+            <br>
+
+            
+      </article>
+    </div>
+
+    
+</div>
+<footer id="contact" style="background-color:#00a6a3;">
+  <div class="contact-form">
+
+          <h4 style="color: black;text-align: center;">İletişim</h4>
+          <p style="color: black; text-align: center;" >Adres: Bilkent Yerleşkesi, Üniversiteler Mahallesi Dumlupınar Bulvarı 6001. Cadde No: 9 Çankaya/Ankara 06800
+            Santral: +90 (312) 585 1000</p>
+
+
+      <ul>
+          <li ><a href="https://www.facebook.com/saglikbakanligi" target="_blank" title="Facebook"><i class="fab fa-facebook"></i> </a></li> 
+          <li><a href="https://www.youtube.com/user/SaglikBakanligi" target="_blank" title="Youtube"><i class="fab fa-youtube"></i> </a></li> 
+          <li><a href="https://twitter.com/saglikbakanligi" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="https://www.instagram.com/saglikbakanligi" target="_blank" title="İnstagram"><i class="fab fa-instagram"></i></a></li>
+      </ul>
+  </div>
+</footer>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("mobile-navbar");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+<script>
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+  
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      } 
+    });
+  }
+  </script>
+
+</body>
+</html>

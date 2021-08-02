@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salgından Nasıl Korunuruz?</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color:#00a6a3;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  border-radius: 3px;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 865px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 865px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+        @media (min-width:992px) {        
+            #mobile-navbar {         
+             display:none !important;     
+            }
+        } 
+
+        @media (max-width:991px) {     
+            #mobile-navbar {     
+            display:block !important; 
+            }       
+            #pc-navbar{         
+            display:none !important;     
+            } 
+        }
+        /* Contact */
+        #contact{
+                color: #fff;
+                padding: 2rem;
+            }
+            #contact .contact-form{
+                width: 80%;
+                height: 20%;
+                margin: auto auto;
+                display: flex;
+                flex-direction: column;
+            }
+            #contact .contact-form ul{
+                list-style-type: none;
+                display: flex;
+                margin: 1rem;
+                align-self: center;
+            }
+            #contact .contact-form ul li a{
+              padding: 1rem;
+              font-size: 2rem;
+            }
+            #contact .contact-form ul li a:hover{
+                opacity: 0.8;
+            }   
+</style>
+</head>
+<body style="background-color:#e8ecf2;">
+    <header>
+        <div class="topnav" id="mobile-navbar">
+      
+          <a href="staj.html">Anasayfa</a>
+     
+          <a href="salgin_tarihcesi.html">Salgın Tarihçesi</a>
+     
+          <a href="salgindan-nasil-korunulur.html">Salgından nasıl korunuruz ?</a>
+   
+          <a href="sss.html">SSS</a>
+      
+          <a href="videolar.html">Videolar</a>
+     
+          <a href="brosur.html">Broşür</a>
+    
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+          </a>   
+        </div>
+    </header>
+   
+    <nav id="pc-navbar" class="navbar navbar-dark navbar-expand-lg text-white " style="background-color:#00a6a3;">
+      <div class="container py-2">
+          <a href="staj.html" class="navbar-brand">Covid-19 Bilgilendirme Sayfası</a>
+          <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-covid" aria-controls="navbar-covid" 
+          aria-expanded="false" aria-haspopup="true">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div class="collapse navbar-collapse d-flex flex-row-reverse" id="navbar-covid">
+              <ul class="navbar-nav ml-auto ">
+                  <li class="nav-item ">
+                      <a href="staj.html" class="nav-link text-white">Anasayfa</a>
+                  </li>
+                  <li class="nav-item ">
+                      <a href="/salgin_tarihcesi.html" class="nav-link text-white">Salgın Tarihçesi</a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="salgindan-nasil-korunulur.html" class="nav-link text-white">Salgından nasıl korunuruz ?</a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="sss.html" class="nav-link text-white">SSS</a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="videolar.html" class="nav-link text-white">Videolar</a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="brosur.html" class="nav-link text-white">Broşür</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+   </nav>
+    
+
+   <div class="container d-flex flex-column bg-white ">
+   
+
+        <article>
+            <p style="text-align: justify;"><h3>COVİD-19 gibi Salgın Hastalıklardan Korunma Yöntemleri</h3><br>
+            </p>
+            <p style="text-align: justify;">İlk olarak Çin’in Wuhan bölgesinde, 2019 yılı Aralık ayının başında görülüp, bu bölgedeki yetkililer tarafından tanımlandığı için gayri resmi Wuhan koronavirüsü adıyla da bilinen yeni koronavirüs solunum yolu enfeksiyonuna neden olan ve insandan insana geçebilen bulaşıcı bir virüstür.
+                30 Ocak 2020'de CoViD-19, Dünya Sağlık Örgütü tarafından küresel bir sağlık acil durumu ilan edilmiştir. 11 Mart 2020 tarihinde ise virüs pandemi, yani küresel salgın hastalık olarak ilan edilmiştir.</p>
+            <p style="text-align: justify;">
+                Tüm dünyayı tehdit eden korona virüsü (COVID-19 hastalığı), Türkiye’de görüldüğü anda sıkı önlemler alındı. Bu önlemlerin en önemlisi de sosyal temasların azaltılması ve bir süreliğine evlerimizde vakit geçirmemizin istenmesi şeklinde oldu.
+                Yetkili birimler gerekli önlemleri alsa da her birimizin üzerine düşen bireysel sorumluluklar var. Hem kendi sağlığımızı hem de toplumun sağlığını korumak için aşağıdaki temel önlemleri almamız hayati öneme sahip.
+            </p>    
+
+        </article>
+        <br>
+        <br>
+        <div class="card mb-3" style="max-width: 90%; box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.2); transition: 0.3s;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img src="images/korunma-yollari/el-hijyeni.jpg" class="card-img" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">1-)El Hijyeni</h5>
+                  <p class="card-text">Kişisel hijyene önem verelim ve bol sabun ile ellerimizi yıkayalım. El yıkama işlemini sık sık gerçekleştirelim, özenli olalım ve süresinin 30 saniyeden az olmamasına dikkat edelim. Ellerimizi yıkayacak bir ortam yoksa, alkol bazlı dezenfektan kullanmaya özen gösterelim.</p>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="card mb-3" style="max-width: 90%; box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.2); transition: 0.3s;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img src="images/korunma-yollari/mesafe.png" class="card-img" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">2-)Sosyal Mesafe</h5>
+                  <p class="card-text">Virüsün en belirgin yayılma yolunun temas etmek olduğunu unutmayalım. Virüsün etkilerinin geçtiğinin ilan edilmesine kadar el sıkma, sarılma gibi fiziksel temaslardan uzak duralım.                </p>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="card mb-3" style="max-width: 90%; box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.2); transition: 0.3s;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img src="images/korunma-yollari/eldiven-maske.jpg" class="card-img" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">3-)Eldiven ve Maske</h5>
+                  <p class="card-text">Özellikle toplu taşıma araçları, alışveriş merkezleri gibi yerlerde hijyen unsurlarına daha fazla dikkat edelim. Merdiven korkuluklarına, toplu taşıma tutamaçlarına, kapı kollarına teması azaltalım. Elbette bu temaslardan kaçınamadığımız durumlar olacaktır. Bu durumlarda ise ellerimizi dezenfekte etmeyi ihmal etmeyelim. İmkanımız varsa ağız, burun çevresini tam kapatan maske ile eldiven kullanalım.</p>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="card mb-3" style="max-width: 90%; box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.2); transition: 0.3s;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img src="images/korunma-yollari/beslenme.jpg" class="card-img" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">4) Sağlıklı Beslenme</h5>
+                  <p class="card-text">Sağlıklı beslenmeye her zaman dikkat etmemiz gerekse de salgın hastalıklar durumunda biraz daha özen göstermek şart. Virüsün, bağışıklık sistemini hedef aldığını unutmayalım. Güçlü bir bağışıklık sistemi için vitamin değerleri yüksek gıdalar tüketelim ve bol bol su içmeye özen gösterelim.
+
+                </p>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="card mb-3" style="max-width: 90%; box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.2); transition: 0.3s;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img src="images/korunma-yollari/gıda-temizliği.jpg" class="card-img" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">5) Gıda Hijyeni</h5>
+                  <p class="card-text">Eğer imkanımız varsa sebzeleri ve meyveleri sirkeli suda bir süre beklettikten sonra tüketelim. İmkanımız yoksa da en azından bol su ile ve iyice yıkamaya dikkat edelim.
+
+                </p>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="card mb-3" style="max-width: 90%; box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.2); transition: 0.3s;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img src="images/korunma-yollari/mendil.jpg" class="card-img" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">6) Tek Kullanımlık Mendil</h5>
+                  <p class="card-text">Evimizde veya dışarıda, hapşırma ve öksürme esnasında mutlak surette mendil kullanalım. Kullanılan mendilleri ikinci kez kullanmadan hızlıca çöpe atalım.
+                </p>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="card mb-3" style="max-width: 90%; box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.2); transition: 0.3s;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img src="images/korunma-yollari/sosyal-izolasyon.jpg" class="card-img" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">7) Sosyal İzolasyon</h5>
+                  <p class="card-text">Salgın hastalıkla mücadele ettiğimiz en kritik süreçte, birkaç hafta evden çıkmamaya, kalabalık alanlara girmemeye özen gösterelim. Dışarı çıkmak zorunda kaldığımızda ise maske ile eldiveni unutmayalım.
+                </p>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="card mb-3" style="max-width: 90%; box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.2); transition: 0.3s;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img src="images/korunma-yollari/asansör.jpg" class="card-img" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">8) ASANSÖRLERDE CORONA VİRÜSTEN NASIL KORUNURUZ?</h5>
+                  <p class="card-text">Öncelikle mümkün olduğunca bu süreçte asansör kullanmamaya özen gösterin ve merdivenleri kullanın. Hem sık kullanılan ve Corona Virüsü bulaşma riski yüksek olan asansörlerden uzaklaşmış hem de spor yapmış olursunuz. Asansöre binmek zorunlu ise, mümkün olduğu kadar az kişi ile binin, kabin içinde başka biri varsa sırt sırta durmaya gayret edin, Asansör iç veya dış butonlarına peçete vb. malzeme ile dokunun ve kullandığınız peçeteyi kapalı bir çöp kutusuna atın.
+                </p>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="card mb-3" style="max-width: 90%; box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.2); transition: 0.3s;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img src="images/korunma-yollari/toplu-taşıma.jpg" class="card-img" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">9) TOPLU TAŞIMADA CORONA VİRÜSTEN NASIL KORUNURUZ?</h5>
+                  <p class="card-text">Hapşıran ya da öksüren birisi ile karşılaşırsak ya da kendisini kötü hissettiğini düşündüğümüz birisi olursa yanımızda, yakınımızda, mümkünse eğer 1 metreden daha fazla yaklaşmamaya çalışalım. Ama tabi toplu taşımada bu her zaman mümkün olmayacak. Eğer bizim de bu tür şikâyetlerimiz var ve bu tür belirtiler gösteriyorsak aslında biz önce kendimizi koruyacağız. Mutlaka maske takılmalı ve toplu taşıma içinde dokunmamız gereken yerlere mümkünse peçete veya eldivenle dokunulup toplu taşıma terk edildinkten sonra derhal çöpe atılmalıdır.
+                </p>
+                </div>
+              </div>
+            </div>
+        </div>
+        
+       
+
+   </div>
+
+   <footer id="contact" style="background-color:#00a6a3;">
+    <div class="contact-form">
+  
+            <h4 style="color: black;text-align: center;">İletişim</h4>
+            <p style="color: black; text-align: center;" >Adres: Bilkent Yerleşkesi, Üniversiteler Mahallesi Dumlupınar Bulvarı 6001. Cadde No: 9 Çankaya/Ankara 06800
+              Santral: +90 (312) 585 1000</p>
+  
+  
+        <ul>
+            <li ><a href="https://www.facebook.com/saglikbakanligi" target="_blank" title="Facebook"><i class="fab fa-facebook"></i> </a></li> 
+            <li><a href="https://www.youtube.com/user/SaglikBakanligi" target="_blank" title="Youtube"><i class="fab fa-youtube"></i> </a></li> 
+            <li><a href="https://twitter.com/saglikbakanligi" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.instagram.com/saglikbakanligi" target="_blank" title="İnstagram"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+    </div>
+  </footer>
+   <script>
+   function myFunction() {
+    var x = document.getElementById("mobile-navbar");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  </script>
+
+<!-- bootstrap -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>

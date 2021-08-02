@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+    <title>Broşür</title>
+    <style>
+        .hover_effect {
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+        }
+        .hover_effect:hover{
+            box-shadow:0 0 100px 35px black;
+            transition: .5s;
+            opacity: 0.7;
+        }
+        h3{
+            font-size: 13px;
+            text-align: center;
+            margin-top: 6px;
+            padding: 9px;
+            margin-right: 75px;
+        }
+        .topnav {
+            overflow: hidden;
+            background-color:#00a6a3;
+        }
+
+        .topnav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            border-radius: 3px;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .topnav a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .topnav .icon {
+            display: none;
+        }
+
+        @media screen and (max-width: 865px) {
+            .topnav a:not(:first-child) {display: none;}
+            .topnav a.icon {
+                float: right;
+                display: block;
+            }
+        }
+
+        @media screen and (max-width: 865px) {
+            .topnav.responsive {position: relative;}
+            .topnav.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            .topnav.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+        }
+        @media screen and (max-width: 865px) {
+            #brosur1 #brosur2 #brosur3 #brosur4 #brosur5 #brosur6 #brosur7{
+                text-align: center !important;
+            }
+        }
+        @media (min-width:992px) {        
+            #mobile-navbar {         
+            display:none !important;     
+            }
+        } 
+
+        @media (max-width:991px) {     
+            #mobile-navbar {     
+            display:block !important; 
+            }       
+            #pc-navbar{         
+            display:none !important;     
+            } 
+        }
+        /* Contact */
+        #contact{
+                color: #fff;
+                padding: 2rem;
+            }
+            #contact .contact-form{
+                width: 80%;
+                height: 20%;
+                margin: auto auto;
+                display: flex;
+                flex-direction: column;
+            }
+            #contact .contact-form ul{
+                list-style-type: none;
+                display: flex;
+                margin: 1rem;
+                align-self: center;
+            }
+            #contact .contact-form ul li a{
+              padding: 1rem;
+              font-size: 2rem;
+            }
+            #contact .contact-form ul li a:hover{
+                opacity: 0.8;
+            }   
+    </style>
+</head>
+<body>
+    <header>
+        <div class="topnav" id="mobile-navbar">
+          
+          <a href="staj.html">Anasayfa</a>
+            
+          <a href="salgin_tarihcesi.html">Salgın Tarihçesi</a>
+    
+          <a href="salgindan-nasil-korunulur.html">Salgından nasıl korunuruz ?</a>
+    
+          <a href="sss.html">SSS</a>
+    
+          <a href="videolar.html">Videolar</a>
+    
+          <a href="brosur.html">Broşür</a>
+            
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>   
+        </div>
+    </header>
+    <nav id="pc-navbar" class="navbar navbar-dark navbar-expand-lg text-white " style="background-color:#00a6a3;">
+        <div class="container py-2">
+            <a href="staj.html" class="navbar-brand">Covid-19 Bilgilendirme Sayfası</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-covid" aria-controls="navbar-covid" 
+            aria-expanded="false" aria-haspopup="true">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse d-flex flex-row-reverse" id="navbar-covid">
+                <ul class="navbar-nav ml-auto ">
+                    <li class="nav-item ">
+                        <a href="staj.html" class="nav-link text-white">Anasayfa</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="/salgin_tarihcesi.html" class="nav-link text-white">Salgın Tarihçesi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="salgindan-nasil-korunulur.html" class="nav-link text-white">Salgından nasıl korunuruz ?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="sss.html" class="nav-link text-white">SSS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="videolar.html" class="nav-link text-white">Videolar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="brosur.html" class="nav-link text-white">Broşür</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+     </nav>
+     <section id="brosur1" class="pages-content">
+         <div  id="brosur2" class="container">
+            <div id="brosur3" class="pages-content-inner shadow pt-30">
+                <div id="brosur4" class="page-content-header" style="padding: 0.5em;">
+                    <div id="brosur5" class="row">
+                        <div id="brosur6" class="col-md-7 col-sm-12">
+                            <h2 id="brosur7" style="text-align: end;">Broşürler</h2>                          
+                        </div>
+                        <div class="col-md-5 col-sm-12">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="pages-content-body">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="post-cover-image wow zoomIn animated shadow-sm p-3 mb-5 bg-white rounded" >
+                                <a class="hover_effect" href="/pdf/covid-19umreibadetindendonen.pdf" target="_blank" >
+                                    <img src="images/brosur-image/hacveumrepage1jpg.png" 
+                                    alt="Umre İbadetinden Dönen Vatandaşlarımıza Yönelik Öneriler">                                                  
+                                </a>
+                                <h3 class="shadow">  
+                                  Umre İbadetinden Dönen Vatandaşlarımıza Yönelik Öneriler 
+                                </h3>       
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="post-cover-image wow zoomIn animated shadow-sm p-3 mb-5 bg-white rounded" >
+                                <a class="hover_effect" href="pdf/covid-19olasivekesinvaka.pdf" target="_blank" >
+                                    <img src="images/brosur-image/evdebakim.png" 
+                                    alt="Umre İbadetinden Dönen Vatandaşlarımıza Yönelik Öneriler">                                                  
+                                </a>
+                                <h3 class="shadow">  
+                                    Olası veya Kesin Vakaların Evde Bakımı 
+                                </h3>       
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="post-cover-image wow zoomIn animated shadow-sm p-3 mb-5 bg-white rounded" >
+                                <a class="hover_effect" href="pdf/covid-19kapaliisyeri.pdf" target="_blank" >
+                                    <img src="images/brosur-image/kapali-isyerleriofislerde-alinacak-onlemler.png" alt="Umre İbadetinden Dönen Vatandaşlarımıza Yönelik Öneriler">                                                  
+                                </a>
+                                <h3 class="shadow">  
+                                    Kapalı İşyeri/Ofislerde Alınacak Önlemler 
+                                </h3>       
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="post-cover-image wow zoomIn animated shadow-sm p-3 mb-5 bg-white rounded" >
+                                <a class="hover_effect" href="pdf/covid19-mevsimliktarimiscileri.pdf" target="_blank" >
+                                    <img src="images/brosur-image/covid19-mti-yonelik-onlemler-brosur.png" alt="Umre İbadetinden Dönen Vatandaşlarımıza Yönelik Öneriler">                                                  
+                                </a>
+                                <h3 class="shadow">  
+                                    Mevsimlik Tarım İşçileri İçin Alınacak Önlemler 
+                                </h3>       
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="post-cover-image wow zoomIn animated shadow-sm p-3 mb-5 bg-white rounded" >
+                                <a class="hover_effect" href="pdf/covid-19salginindataksimusterileri.pdf" target="_blank" >
+                                    <img src="images/brosur-image/covid-19salginindataksi.png" alt="Umre İbadetinden Dönen Vatandaşlarımıza Yönelik Öneriler">                                                  
+                                </a>
+                                <h3 class="shadow">  
+                                    Taksi Müşterilerinin Alması Gereken Önlemler 
+                                </h3>       
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="post-cover-image wow zoomIn animated shadow-sm p-3 mb-5 bg-white rounded" >
+                                <a class="hover_effect" href="pdf/covid-19evdeizlemonerileri.pdf" target="_blank" >
+                                    <img src="images/brosur-image/evde-izleme.png" 
+                                    alt="Umre İbadetinden Dönen Vatandaşlarımıza Yönelik Öneriler">                                                  
+                                </a>
+                                <h3 class="shadow">  
+                                    COVID-19 Evde İzlem Önerileri 
+                                </h3>       
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+         </div>
+     </section>
+
+     <footer id="contact" style="background-color:#00a6a3;">
+        <div class="contact-form">
+      
+                <h4 style="color: black;text-align: center;">İletişim</h4>
+                <p style="color: black; text-align: center;" >Adres: Bilkent Yerleşkesi, Üniversiteler Mahallesi Dumlupınar Bulvarı 6001. Cadde No: 9 Çankaya/Ankara 06800
+                  Santral: +90 (312) 585 1000</p>
+      
+      
+            <ul>
+                <li ><a href="https://www.facebook.com/saglikbakanligi" target="_blank" title="Facebook"><i class="fab fa-facebook"></i> </a></li> 
+                <li><a href="https://www.youtube.com/user/SaglikBakanligi" target="_blank" title="Youtube"><i class="fab fa-youtube"></i> </a></li> 
+                <li><a href="https://twitter.com/saglikbakanligi" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/saglikbakanligi" target="_blank" title="İnstagram"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+      </footer>
+     <script>
+        function myFunction() {
+          var x = document.getElementById("mobile-navbar");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+        </script>
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>

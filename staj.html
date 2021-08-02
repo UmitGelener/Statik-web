@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+    
+    <title>Anasayfa</title>
+    <style>
+        /* Slide kısmı */
+        .mySlides {
+            display:none;
+        }
+        .w3-left, .w3-right, .w3-badge {
+            cursor:pointer;
+            }
+        .w3-badge {
+            height:13px;
+            width:13px;
+            padding:0;
+            }
+        .page-content-header{
+            margin: 20px;
+            padding: 20px;          
+        }
+        .page-content-header h3{
+            color: #00a6a3;            
+        }
+        body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .topnav {
+        overflow: hidden;
+        background-color:#00a6a3;
+        }
+
+        .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        border-radius: 3px;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        }
+
+        .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+        }
+
+        .topnav a.active {
+        background-color: #4CAF50;
+        color: white;
+        }
+
+        .topnav .icon {
+        display: none;
+        }
+
+        @media screen and (max-width: 865px) {
+        .topnav a:not(:first-child) {display: none;}
+        .topnav a.icon {
+         float: right;
+         display: block;
+        }
+        }
+
+        @media screen and (max-width: 865px) {
+        .topnav.responsive {position: relative;}
+        .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    }
+/* @media screen and (max-width: 865px) {
+  div.card {
+    display: none;
+  }
+} */
+
+
+    @media (min-width:800px) {        
+        .container #mobile1 {         
+        display:none !important;     
+        } 
+    } 
+
+    @media (max-width:800px) {     
+        .container #mobile1 {     
+        display:block !important;           
+        width: 80%;
+        margin-left: 10%;
+        }       
+        .container #pc1{         
+        display:none !important;     
+        } 
+        .container #pc2{         
+        display:none !important;     
+        } 
+        }       
+        @media (min-width:992px) {        
+            #mobile-navbar {         
+            display:none !important;     
+            }
+        } 
+
+        @media (max-width:991px) {     
+            #mobile-navbar {     
+            display:block !important; 
+            }       
+            #pc-navbar{         
+            display:none !important;     
+            } 
+        }
+
+        /* Contact */
+        #contact{
+                color: #fff;
+                padding: 2rem;
+            }
+            #contact .contact-form{
+                width: 80%;
+                height: 20%;
+                margin: auto auto;
+                display: flex;
+                flex-direction: column;
+            }
+            #contact .contact-form ul{
+                list-style-type: none;
+                display: flex;
+                margin: 1rem;
+                align-self: center;
+            }
+            #contact .contact-form ul li a{
+              padding: 1rem;
+              font-size: 2rem;
+            }
+            #contact .contact-form ul li a:hover{
+                opacity: 0.8;
+            }
+    </style>    
+</head>
+<body style="background-color:#e8ecf2;">
+    <header>
+        <nav id="pc-navbar" class="navbar navbar-dark navbar-expand-lg  text-white" style="background-color:#00a6a3;  z-index: 1000 !important; width: 100%!important; position: fixed !important; top: 0 !important;">
+            <div class="container py-2">
+                <a href="staj.html" class="navbar-brand">Covid-19 Bilgilendirme Sayfası</a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-covid" aria-controls="navbar-covid" 
+                aria-expanded="false" aria-haspopup="true">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse d-flex flex-row-reverse" id="navbar-covid">
+                    <ul class="navbar-nav ml-auto ">
+                        <li class="nav-item ">
+                            <a href="staj.html" class="nav-link text-white">Anasayfa</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="salgin_tarihcesi.html" class="nav-link text-white">Salgın Tarihçesi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="salgindan-nasil-korunulur.html" class="nav-link text-white">Salgından nasıl korunuruz ?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="sss.html" class="nav-link text-white">SSS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="videolar.html" class="nav-link text-white">Videolar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="brosur.html" class="nav-link text-white">Broşür</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+         </nav>
+    </header>
+    <header>
+        <div class="topnav" id="mobile-navbar">
+          
+          <a href="staj.html">Anasayfa</a>
+            
+          <a href="salgin_tarihcesi.html">Salgın Tarihçesi</a>
+    
+          <a href="salgindan-nasil-korunulur.html">Salgından nasıl korunuruz ?</a>
+    
+          <a href="sss.html">SSS</a>
+    
+          <a href="videolar.html">Videolar</a>
+    
+          <a href="brosur.html">Broşür</a>
+            
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>   
+        </div>
+    </header>
+    <section class="pages-content" style="margin-top: 100px !important;">
+        <div class="container-fluid">
+            <div class="pages-content-inner shadow pt-100">
+                <div class="page-content-header">
+                    <h3 style="text-align: center;">COVID-19</h3>
+                </div>
+                <div class="page-content-body">
+                    
+                </div>               
+            </div>
+        </div>
+    </section>
+
+    <section class="slide">  
+          <div class="w3-content w3-display-container" style="max-width:80%; max-height: 35%;">       
+                <a href="salgin_tarihcesi.html" >
+                    <img class="mySlides" src="images/salgıntarihce-img/Kolera.jpeg" style="width:100%;  height:30em;">
+                </a>
+                <a href="salgindan-nasil-korunulur.html" >
+                    <img class="mySlides" src="images/korunma-yollari/el-hijyeni.jpg" style="width:100%;  height: 30em;">
+                </a>
+                <a href="sss.html" >
+                    <img class="mySlides" src="images/korona3.jpg" style="width:100%;  height: 30em">
+                </a>
+                <a href="videolar.html" >
+                    <img class="mySlides" src="images/videos-saglık/sağlık.png" style="width:100%;  height: 30em;">
+                </a>
+                <a href="brosur.html" >
+                    <img class="mySlides" src="images/çocuk.jpg" style="width:100%;  height: 30em;">
+                </a>  
+                                                            
+            
+            <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+              <div class="w3-left w3-hover-text-khaki" style="color:#00a6a3;"  onclick="plusDivs(-1)">&#10094;</div>
+              <div class="w3-right w3-hover-text-khaki" style="color:#00a6a3;" onclick="plusDivs(1)">&#10095;</div>
+              <span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="currentDiv(1)"></span>
+              <span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="currentDiv(2)"></span>
+              <span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="currentDiv(3)"></span>
+              <span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="currentDiv(4)"></span>
+              <span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="currentDiv(5)"></span>
+            </div>
+          </div>
+          <p style="text-align: center;">Fotoğraflara tıklarsanız ilgili sayfaya aktarılırsınız.</p>
+    </section>
+
+    <div class="w3-container" style="margin: 30px;">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="w3-panel w3-card-4 w3-green">
+                    <h3 style="text-decoration: underline;">Jüstinyen Vebası</h3>
+                    <p>Şimdi Jüstinyen vebası olarak bilinen bu salgının, o zamanlar belki de dünya nüfusunun yarısına eşit olan 30 milyon ila ...
+                        <a href="salgin_tarihcesi.html">devamı için tıklayınız.</a> </p>                
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="w3-panel w3-card-4 w3-blue">
+                    <h3 style="text-decoration: underline;">El Hijyeni</h3>
+                    <p>Kişisel hijyene önem verelim ve bol sabun ile ellerimizi yıkayalım. El yıkama işlemini sık sık gerçekleştirelim, özenli olalım ve  ...
+                        <a href="salgindan-nasil-korunulur.html">devamı için tıklayınız.</a> </p>                
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="w3-panel w3-card-4 w3-blue">
+                    <h3 style="text-decoration: underline;">COVID-19’un grip ya da soğuk algınlığından farkı nasıl anlaşılır?</h3>
+                    <p>2019-nCoV enfeksiyonunda, grip veya soğuk algınlığında olduğu gibi genellikle ateş, öksürük ve burun akıntısı gibi solunum şikayetleri görülür. Birçok yakınma benzer olsa da, ...
+                        <a href="sss.html">devamı için tıklayınız.</a> </p>                
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="w3-panel w3-card-4 w3-green">
+                    <h3 style="text-decoration: underline;">COVID-19 Hakkında Özet Bilgiler</h3>
+                    <p>Covid Hakkında özet bilgilere ulaşabilmek ve alanında uzman doktorlardan bilgi edinmek için ...
+                        <a href="videolar.html">devamı için tıklayınız.</a> </p>                
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="w3-panel w3-card-4 w3-green">
+                    <h3 style="text-decoration: underline;">COVID-19 Evde İzlem Önerileri</h3>
+                    <p>COVID-19 hastalığını evde geçiyorsanız ve neler yapmanız gerektiğini bilmiyorsanız broşürü inceleyiniz ...
+                        <a href="brosur.html">devamı için tıklayınız.</a> </p>                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <footer id="contact" style="background-color:#00a6a3;">
+        <div class="contact-form">
+      
+                <h4 style="color: black;text-align: center;">İletişim</h4>
+                <p style="color: black; text-align: center;" >Adres: Bilkent Yerleşkesi, Üniversiteler Mahallesi Dumlupınar Bulvarı 6001. Cadde No: 9 Çankaya/Ankara 06800
+                  Santral: +90 (312) 585 1000</p>
+      
+      
+            <ul>
+                <li ><a href="https://www.facebook.com/saglikbakanligi" target="_blank" title="Facebook"><i class="fab fa-facebook"></i> </a></li> 
+                <li><a href="https://www.youtube.com/user/SaglikBakanligi" target="_blank" title="Youtube"><i class="fab fa-youtube"></i> </a></li> 
+                <li><a href="https://twitter.com/saglikbakanligi" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/saglikbakanligi" target="_blank" title="İnstagram"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+      </footer>
+    
+    <!-- JS Slide -->
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+        
+        function plusDivs(n) {
+          showDivs(slideIndex += n);
+        }
+        
+        function currentDiv(n) {
+          showDivs(slideIndex = n);
+        }
+        
+        function showDivs(n) {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("demo");
+          if (n > x.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = x.length}
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" w3-white", "");
+          }
+          x[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " w3-white";
+        }
+        </script>
+
+<script>
+    function myFunction() {
+      var x = document.getElementById("mobile-navbar");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>
+</body>
+</html>

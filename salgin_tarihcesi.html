@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+    
+    <title>Salgın Tarihçesi</title>
+    <style>
+        body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .topnav {
+        overflow: hidden;
+        background-color:#00a6a3;
+        }
+
+        .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        border-radius: 3px;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        }
+
+        .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+        }
+
+        .topnav a.active {
+        background-color: #4CAF50;
+        color: white;
+        }
+
+        .topnav .icon {
+        display: none;
+        }
+
+        @media screen and (max-width: 865px) {
+        .topnav a:not(:first-child) {display: none;}
+        .topnav a.icon {
+            float: right;
+            display: block;
+        }
+        }
+
+        @media screen and (max-width: 865px) {
+        .topnav.responsive {position: relative;}
+        .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+        }
+        } 
+        .col-9 p {
+            margin: 10px 0 10px 5px;
+            border-left: 6px solid #00A6A3;
+        }   
+        #list-example.list-group{
+            position: sticky;
+            top: 20px;
+            border: 2px solid #00A6A3;
+        }
+        .list-group-item.list-group-item-action{
+            padding-left: 5px;
+        }
+        @media (min-width:1100px) {        
+            #mobile {         
+            display:none !important;     
+            } 
+        } 
+
+        @media (max-width:1100px) {     
+            #mobile {     
+            display:block !important; 
+            }       
+            #pc{         
+            display:none !important;     
+            } 
+        }
+       
+        @media (min-width:992px) {        
+            #mobile-navbar {         
+            display:none !important;     
+            }
+        } 
+
+        @media (max-width:991px) {     
+            #mobile-navbar {     
+            display:block !important; 
+            }       
+            #pc-navbar{         
+            display:none !important;     
+            } 
+        }
+    
+        /* Contact */
+        #contact{
+                color: #fff;
+                padding: 2rem;
+            }
+            #contact .contact-form{
+                width: 80%;
+                height: 20%;
+                margin: auto auto;
+                display: flex;
+                flex-direction: column;
+            }
+            #contact .contact-form ul{
+                list-style-type: none;
+                display: flex;
+                margin: 1rem;
+                align-self: center;
+            }
+            #contact .contact-form ul li a{
+              padding: 1rem;
+              font-size: 2rem;
+            }
+            #contact .contact-form ul li a:hover{
+                opacity: 0.8;
+            }
+    </style>
+</head>
+<body >
+    <!-- Mobile topnav -->
+    <header>
+        <div class="topnav" id="mobile-navbar">
+      
+            <a href="staj.html">Anasayfa</a>
+     
+            <a href="salgin_tarihcesi.html">Salgın Tarihçesi</a>
+       
+            <a href="salgindan-nasil-korunulur.html">Salgından nasıl korunuruz ?</a>
+     
+            <a href="sss.html">SSS</a>
+        
+            <a href="videolar.html">Videolar</a>
+       
+            <a href="brosur.html">Broşür</a>
+    
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+          </a>   
+        </div>
+    </header>
+    <!-- web topnav -->
+    <nav id="pc-navbar" class="navbar navbar-dark navbar-expand-lg  text-white " style="background-color:#00a6a3;">
+        <div class="container py-2">
+            <a href="staj.html" class="navbar-brand">Covid-19 Bilgilendirme Sayfası</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-covid" aria-controls="navbar-covid" 
+            aria-expanded="false" aria-haspopup="true">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse d-flex flex-row-reverse" id="navbar-covid">
+                <ul class="navbar-nav ml-auto ">
+                    <li class="nav-item ">
+                        <a href="staj.html" class="nav-link text-white">Anasayfa</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="salgin_tarihcesi.html" class="nav-link text-white">Salgın Tarihçesi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="salgindan-nasil-korunulur.html" class="nav-link text-white">Salgından nasıl korunuruz ?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="sss.html" class="nav-link text-white">SSS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="videolar.html" class="nav-link text-white">Videolar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="brosur.html" class="nav-link text-white">Broşür</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+     </nav>
+
+
+     <!-- Üst kısım -->
+     <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4" style="font-size: 1.5rem;">İnsanlık Tarihinin Seyrini Değiştiren Salgın Hastalıklar</h1>
+          <p class="lead">Bu salgınların birçoğu, küresel nüfusun büyük yüzdelerini öldürdü ve insanların hayatla ilgili daha büyük sorular sormasına neden oldu.</p>
+        </div>
+      </div>
+      <hr class="my-4">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-3" id="mobile">
+                <!-- Listeler -->
+                <div id="list-example" class="list-group">
+                    <a class="list-group-item list-group-item-action" href="#list-item-1">Jüstinyen Vebası</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-2">Kara Ölüm</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-3">Çiçek hastalığı</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-4">Kolera</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-5">İspanyol Gribi</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-6">Hong Kong Gribi</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-7">HIV / AIDS</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-8">SARS</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-9">Domuz Gribi</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-10">Ebola</a>
+                </div>
+            </div>
+            <div class="col-3" id="pc" >
+                <!-- Listeler -->
+                <div id="list-example" class="list-group">
+                    <a class="list-group-item list-group-item-action" href="#list-item-11">Jüstinyen Vebası</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-22">Kara Ölüm</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-33">Çiçek hastalığı</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-44">Kolera</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-55">İspanyol Gribi</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-66">Hong Kong Gribi</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-77">HIV / AIDS</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-88">SARS</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-99">Domuz Gribi</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-101">Ebola</a>
+                </div>
+            </div>
+            <div class="col-9" id="mobile">
+                <!-- Açıklamalar -->
+                <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example" >
+                    <h4 id="list-item-1">Jüstinyen Vebası (MS 541-750)</h4>
+                    <img src="images/salgıntarihce-img/JustinyenVebası.jpeg" width="270px" height="30%">
+                    <p>I. Jüstinyen (MS 483 – 565) Doğu Roma İmparatorluğu’nu yönetti ve tekrar kaybetmeden önce Batı Roma İmparatorluğu’nun çoğunu fethetti. C: Bettmann/Getty
+                        6. yüzyılda hıyarcıklı veba salgını, Bizans imparatoru I. Jüstinyen’in saltanatının önüne taş koydu. Şimdi Jüstinyen vebası olarak bilinen bu salgının, o zamanlar belki de dünya nüfusunun yarısına eşit olan 30 milyon ila 50 milyon insanı öldürdüğü düşünülüyor.
+                        
+                        Jüstinyen vebası kesinlikle yaşandı, ancak araştırmacılar hala yaklaşık 1.500 yıl önce ne kadar kötü etkilediğine dair kanıtları inceliyorlar.
+                        
+                        Bu salgının geleneksel anlatısı, ticaretin büyük ölçüde durması, imparatorluğun zayıflaması ve bunun sonucunda Bizans’ın, diğer medeniyetlerin Orta Doğu, Kuzey Afrika ve Asya’nın bazı bölgelerindeki kendi topraklarını yeniden ele geçirmesine izin vermesi yönünde. Jüstinyen, veba vurduğunda Roma İmparatorluğu’nun doğu ve batı yarısını yeniden birleştirme sürecinde olduğu için, veba o dönemin gerçek sonu olarak bile görüldü.
+                        
+                        Sonuç olarak, bu salgının ne kadar kötü olabildiğini biliyoruz: dünyanın yarısı öldü, Roma İmparatorluğu bir daha asla birleşmedi ve Karanlık Çağ başladı.</p>
+                    <hr>
+                    <h4 id="list-item-2">Kara Ölüm (1347-1351)</h4>
+                    <img src="images/salgıntarihce-img/KaraOlum.jpeg" width=" 270px" height="30%">
+                    <p>Veba kurbanlarının vücutlarında çıkan çıbanlardan acı çekerken tasviri, Toggenburg İncilinden (1411). C: Wikimedia
+                        1347 ve 1351 arasında, hıyarcıklı veba Avrupa’ya yayıldı ve yaklaşık 25 milyon insanı öldürdü. Avrupa nüfusunun 1347’den önceki seviyelerine dönmesi 200 yıldan fazla sürdü. Büyük olasılıkla Asya’da, özellikle hastalığın kaynağı olarak düşünülen Çin’de, daha fazla sayıda insanı öldürdü.
+                        
+                        Daha sonralar Kara Ölüm olarak bilinecek olan salgının diğer sonuçları, hayatta kalanların yaşam standardının gerçekten artmasına yol açacak kadar çok insan öldüğü için, köleliğin düşüşünün başlangıcıydı. İşçilerin daha fazla iş fırsatı vardı ve sosyal hareketlilik arttı, aynı zamanda savaş zamanında kısa bir süreliğine borçlar ertelenmişti.</p>
+                    <hr>
+                    <h4 id="list-item-3">Çiçek hastalığı (15.YY-17.YY)</h4>
+                    <img src="images/salgıntarihce-img/CicekHastalıgı.jpeg" width=" 270px" height="30%">
+                    <p>Doktor Edward Jenner’in ilk çiçek hastalığı aşılamasını tasvir eden tarihsiz illüstrasyon, 1796’da James Phipps’de yapıldı. GG Melingue tarafından yapılan bir resimden sonra. C: Bettmann
+                        Avrupalılar, 1492’de Amerika kıtasına ilk geldiklerinde bir dizi yeni hastalık getirdiler. Bunlardan biri, enfekte olanların yaklaşık %30’unu öldüren bulaşıcı çiçek hastalığıydı.
+                        
+                        Bu dönemde çiçek hastalığı, Amerika’da nüfusunun %90’ına yakın olan yaklaşık 20 milyon insanın canını aldı. Salgın, Avrupalılar’ın yeni boşalan alanları kolonize etmelerine ve geliştirmelerine yardımcı oldu, Amerikalılar’ın ve Avrupalı ​​işgalcilerin tarihini ve küresel ekonomiyi sonsuza dek değiştirdi.
+                        
+                        Örneğin, “Yeni Dünya”nın maden servetinin Latin Amerika’dan gümüş ve altın şeklinde sömürülmesi, İspanyol İmparatorluğu’nda büyük bir enflasyona yol açtı. Büyük ekonomik düşünür John Maynard Keynes 1930’da bu “fiyat devrimi”nin modern kapitalizmin oluşumunda önemli bir dönüm noktası olduğunu yazdı.</p>
+                    <hr>
+                    <h4 id="list-item-4">Kolera (1817-1823)</h4>
+                    <img src="images/salgıntarihce-img/Kolera.jpeg" width=" 270px" height="30%">
+                    <p>Hastalar Port-au-Prince, Haiti’deki Diquini Kolera Tedavi Merkezi’nde beklerken. C: Reuters
+                        İlk kolera salgını Hindistan’ın Jessore şehrinde başladı ve bölgenin büyük bir kısmından sonra da komşu bölgelere yayıldı. Milyonlarca insanı öldüren yedi büyük kolera salgından ilkiydi. John Snow adında bir doktor, yayılmasının nasıl önleneceği hakkında bazı şeyler biliyordu ve 1854’te Londra’nın Soho mahallesindeki belirli bir su pompasının kaynağını izole ederek salgını durdurdu.
+                        
+                        Dünya Sağlık Örgütü koleraya “unutulmuş salgın” adını verdi ve 1961’de başlayan yedinci salgının bugüne kadar devam ettiğini söyledi. Koleranın her yıl 1.3 milyon ila 4 milyon kişiye bulaştığı ve yıllık ölümlerin 21.000 ila 143.000 arasında değiştiği bildiriliyor.
+                        
+                        Kolera, belirli bir bakteri ile kontamine olmuş yiyecekten ya da sudan kaynaklandığından, aşırı servet eşitsizliği ve sosyal gelişim eksikliğinden etkilenen ülkelere ezici bir şekilde zarar veriyor. Kolera, dünyanın kendini en az savunabilecek kısımlarına zarar vererek dünyayı değiştirmeye devam ederken, daha zengin ülkeler bu hastalık için pek de endişeli değil.</p>
+                    <hr>
+                    <h4 id="list-item-5">İspanyol Gribi (1918-1919)</h4>
+                    <img src="images/salgıntarihce-img/H1N1.jpeg" width=" 270px" height="30%">
+                    <p>Oakland Belediye Konferans Salonu, 1918 yılında Kaliforniya, Oakland’da grip salgını sırasında Amerikan Kızıl Haçından gönüllü hemşirelerin yer aldığı geçici bir hastane olarak kullanıldı. C: Underwood Archives
+                        1918 influenza salgını olarak da bilinen İspanyol Gribi, 21. yüzyılın başlarında yaklaşık 500 milyon insanı veya dünya nüfusunun üçte birini enfekte eden bir H1N1 virüsünün patlak vermesi sonucunda ortaya çıktı. Salgın, dünya çapında 50 milyondan fazla insanın ölümünden sorumluydu.
+                        
+                        Salgın sırasında I. Dünya Savaşı sona ermişti ve halk sağlığı otoritelerinin, büyük etkisine katkıda bulunan viral salgınlarla başa çıkmak için hiçbir resmi protokolleri yoktu ya da bunlar yetersizdi.
+                        
+                        İlerleyen yıllarda, salgının nasıl gerçekleştiğini ve nasıl önlenebileceğini anlamaya yönelik araştırmalar, halk sağlığında iyileşmelere yol açtı ve daha sonra benzer grip benzeri virüs salgınlarının etkisini azaltmaya yardımcı oldu.</p>
+                    <hr>
+                    <h4 id="list-item-6">Hong Kong Gribi veya H3N2 (1968-1970)</h4>
+                    <img src="images/salgıntarihce-img/H3N2.jpeg" width=" 270px" height="30%">
+                    <p>2011’de CDC tarafından sağlanan, H3N2 grip virüsünü gösteren elektron mikroskop görüntüsü. C: Associated Press
+                        İspanyol Gribi’nden elli yıl sonra, başka bir grip virüsü H3N2 dünyaya yayıldı. Tahminlere göre, küresel ölümlerin sayısı yaklaşık bir milyon kişiyi kapsıyordu.
+                        
+                        1968 salgını 20. yüzyılda meydana gelen üçüncü grip salgını, diğer ikisi 1918’de İspanyol gribi ve 1957’de Asya gribi salgınıydı. Asya gribinden sorumlu olan virüsün, evrimleşip 10 yıl sonra bu sözde “Hong Kong gribi” adı verilen H3N2 salgınıyla tekrar ortaya çıktığına inanılıyor. Ancak 21. yüzyıl, grip salgınlarını görmeye devam edecekti.
+                        
+                        1918 influenza salgını kadar ölümcül olmasa da, H3N2 son derece bulaşıcıydı ve Hong Kong’da bildirilen ilk vakadan 2 hafta sonra 500.000 kişi enfekte oldu. Salgın, küresel sağlık topluluğunun, aşıların gelecekteki salgınları önlemedeki hayati rolünü anlamasına yardımcı oldu.</p>
+                    <hr>
+                    <h4 id="list-item-7">HIV / AIDS (1981-Günümüz)</h4>
+                    <img src="images/salgıntarihce-img/Aids.jpeg" width=" 270px" height="30%">
+                    <p>Dünya AIDS Günü’nden bir gün önce, Hindistan’da yapılan HIV/AIDS farkındalık gösterilerinden bir adam. C: Reuters
+                        Bilinen ilk HIV/AIDS vakaları 1981’de bildirildi, ancak hastalık bugün insanları enfekte etmeye ve öldürmeye devam ediyor. 1981’den bu yana 75 milyon insan HIV virüsüne yakalandı ve sonucunda yaklaşık 32 milyon insan öldü. Tedavisi olmayan, cinsel yolla bulaşan bir hastalık olarak HIV/AIDS, her yıl milyonlarca insanı etkilemeye devam eden inatçı bir salgın. AIDS’in tedavisinin olmamasına rağmen, antiretroviral tedavi ilaçları HIV’i kontrol edebilir ve ilerlemesini önemli ölçüde yavaşlatarak enfekte olmuş birinin uzun bir yaşam sürmesine izin verebilir.
+                        
+                        Basketbol süperstarı Magic Johnson, 1991’de NBA’den emekli olduğunda, o zamanlar HIV olduğunu halka açıklayan en ünlü isim olarak tarihe adını yazdı. Johnson, önde gelen bir iş adamı olmaya devam ediyor ve 2012’de Los Angeles Dodgers beyzbol takımını satın alan bir grubun partnerlerinden biriydi.
+                        
+                        HIV / AIDS’in küresel ekonomi üzerindeki olumsuz etkisi, özellikle HIV/AIDS vakalarının en büyük yüzdesine sahip olan Afrika’da halen araştırılıyor. 1980’lerde ve 90’larda, küresel LGBTQ topluluğu, hastalığın bu topluluğun üyeleri üzerindeki orantısız etkisi nedeniyle öne çıktı ve daha önce olmadığı kadar görünür hale geldi. HIV/AIDS ve homofobiye yönelik ilk ana akım filmlerden biri 1993 yılında vizyona giren Akademi Ödüllü “Philadelphia” idi.</p>
+                    <hr>
+                    <h4 id="list-item-8">SARS (2002-2003)</h4>
+                    <img src="images/salgıntarihce-img/Sars.jpeg" width=" 270px" height="30%">
+                    <p>23 Nisan 2003 Çarşamba günü Pekin Demiryolu İstasyonu’nda bilet almak için beklerken SARS virüsüne karşı koruma olarak insanlar maske takıyorlar. C: Greg Baker/ AP
+                        SARS veya şiddetli akut solunum sendromu, insanları enfekte edebilen 7 koronavirüsün birinden kaynaklanan bir hastalıktı. 2003 yılında, Çin’in Guangdong eyaletinden kaynaklanan bir salgın, toplam 26 ülkeye hızla yayıldığı ve 8.000’den fazla insanı enfekte ettiği ve 774 kişiyi öldürdüğü için küresel bir salgın olarak nitelendirildi.
+                        
+                        2003 SARS salgınının sonuçları, etkilenen alanları karantinaya almak ve enfekte olmuş bireyleri izole etmek de dahil olmak üzere küresel otoriteler tarafından yoğun bir halk sağlığı tepkisi nedeniyle büyük ölçüde sınırlıydı. Yeni 2019 koronavirüsü inceleyen bilim insanları, genetik yapısının SARS virüsüyle %86.9 aynı olduğunu keşfettiler ve yetkililer şimdi hükümetlerin 2003’teki sınırlama prosedürlerinden herhangi birini başarıyla kopyalayıp kopyalayamayacaklarını görmek için ikisini karşılaştırıyorlar.
+                        
+                        SARS salgını, özellikle halka açık yüzeylerin o zamandan beri düzenli olarak dezenfekte edildiği ve yüz maskeleriyle dolaşan insan manzaraları haline geldiği Hong Kong’da viral hastalık bulaşmasını önleme konusunda farkındalığı artırdı.</p>
+                    <hr>
+                    <h4 id="list-item-9">Domuz Gribi (2009-2010)</h4>
+                    <img src="images/salgıntarihce-img/DomuzGribi.jpeg" width=" 270px" height="30%">
+                    <p>Domuz Gribi’nin 2009 sonbaharında ABD’de yayılırken izlediği yolu gösteren bir harita. C: PLOS Computational Biology
+                        2009 yılında, ABD’de yaklaşık 60,8 milyon insanı enfekte eden ve 151.700 ila 575.400 aralığında küresel çapta ölüm yaratan yeni bir grip virüsü formu ortaya çıktı. Domuzlardan insanlara geçtiği görüldüğü için “domuz gribi” olarak adlandırıldı. H1N1, virüsle ilişkili ölümlerin %80’inin 65 yaşından küçük insanlarda meydana gelmesi nedeniyle tipik grip salgınlarından farklıydı. Genelde, grip salgınlarından ölümlerin %70 ila %90’ı 65 yaş üstünde görülür.
+                        
+                        H1N1, 21. yüzyılda bir viral salgının ne kadar hızlı yayılabileceğini gösterdi ve bu da küresel toplumun gelecekte daha hızlı tepki vermesi için ek hazırlıkların gerekli olduğunu gösterdi. Domuz gribinin bizlere bıraktığı önemli bir miras, gelişmiş sağlık sistemlerine sahip birçok ülkenin hızlı hareket eden, grip benzeri bir salgın karşısında nasıl ısrarlı bir şekilde çaresiz kalabildiklerini ortaya çıkarması olabilir.</p>
+                    <hr>
+                    <h4 id="list-item-10">Ebola (2014-2016)</h4>
+                    <img src="images/salgıntarihce-img/Ebola.jpeg" width=" 270px" height="30%">
+                    <p>Kongo’da işçiler bir Ebola kurbanını gömüyorlar. C: Jerome Delay/AP
+                        İlk salgına yakın bir nehir için adlandırılan Ebola virüsü, çoğu modern pandemiye kıyasla menzili sınırlıydı, ancak inanılmaz derecede ölümcül. 2014 yılında Gine’deki küçük bir köyde başladı ve Batı Afrika’daki birkaç komşu ülkeye yayıldı. Virüs 28.600 enfekte insanın 11.325’ini öldürdü, çoğu vaka Gine, Liberya ve Sierra Leone’de meydana geldi. CDC’ye göre, Ebola ile temas eden yapan sekiz Amerikalıdan biri öldü.
+                        
+                        Ebola’nın toplam 4.3 milyar dolara mal olduğu tahmin ediliyor ve gelen yatırımlar yukarıdaki üç ülkede önemli ölçüde düşüyor. “Unutulmuş salgın” kolera gibi, Ebola’nın da en çok zarar verdiği ülkeler, buna karşı savunmak için en az donanıma sahipti.</p>
+                    <hr>
+                </div>
+            </div>
+            <div class="col-9" id="pc">
+                <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example" >
+                    <h4 id="list-item-11">Jüstinyen Vebası (MS 541-750)</h4>
+                    <img src="images/salgıntarihce-img/JustinyenVebası.jpeg" width="600px" height="400px">
+                    <p>I. Jüstinyen (MS 483 – 565) Doğu Roma İmparatorluğu’nu yönetti ve tekrar kaybetmeden önce Batı Roma İmparatorluğu’nun çoğunu fethetti. C: Bettmann/Getty
+                        6. yüzyılda hıyarcıklı veba salgını, Bizans imparatoru I. Jüstinyen’in saltanatının önüne taş koydu. Şimdi Jüstinyen vebası olarak bilinen bu salgının, o zamanlar belki de dünya nüfusunun yarısına eşit olan 30 milyon ila 50 milyon insanı öldürdüğü düşünülüyor.
+                        
+                        Jüstinyen vebası kesinlikle yaşandı, ancak araştırmacılar hala yaklaşık 1.500 yıl önce ne kadar kötü etkilediğine dair kanıtları inceliyorlar.
+                        
+                        Bu salgının geleneksel anlatısı, ticaretin büyük ölçüde durması, imparatorluğun zayıflaması ve bunun sonucunda Bizans’ın, diğer medeniyetlerin Orta Doğu, Kuzey Afrika ve Asya’nın bazı bölgelerindeki kendi topraklarını yeniden ele geçirmesine izin vermesi yönünde. Jüstinyen, veba vurduğunda Roma İmparatorluğu’nun doğu ve batı yarısını yeniden birleştirme sürecinde olduğu için, veba o dönemin gerçek sonu olarak bile görüldü.
+                        
+                        Sonuç olarak, bu salgının ne kadar kötü olabildiğini biliyoruz: dünyanın yarısı öldü, Roma İmparatorluğu bir daha asla birleşmedi ve Karanlık Çağ başladı.</p>
+                    <hr>
+                    <h4 id="list-item-22">Kara Ölüm (1347-1351)</h4>
+                    <img src="images/salgıntarihce-img/KaraOlum.jpeg" width="600px" height="400px">
+                    <p>Veba kurbanlarının vücutlarında çıkan çıbanlardan acı çekerken tasviri, Toggenburg İncilinden (1411). C: Wikimedia
+                        1347 ve 1351 arasında, hıyarcıklı veba Avrupa’ya yayıldı ve yaklaşık 25 milyon insanı öldürdü. Avrupa nüfusunun 1347’den önceki seviyelerine dönmesi 200 yıldan fazla sürdü. Büyük olasılıkla Asya’da, özellikle hastalığın kaynağı olarak düşünülen Çin’de, daha fazla sayıda insanı öldürdü.
+                        
+                        Daha sonralar Kara Ölüm olarak bilinecek olan salgının diğer sonuçları, hayatta kalanların yaşam standardının gerçekten artmasına yol açacak kadar çok insan öldüğü için, köleliğin düşüşünün başlangıcıydı. İşçilerin daha fazla iş fırsatı vardı ve sosyal hareketlilik arttı, aynı zamanda savaş zamanında kısa bir süreliğine borçlar ertelenmişti.</p>
+                    <hr>
+                    <h4 id="list-item-33">Çiçek hastalığı (15.YY-17.YY)</h4>
+                    <img src="images/salgıntarihce-img/CicekHastalıgı.jpeg" width="600px" height="400px">
+                    <p>Doktor Edward Jenner’in ilk çiçek hastalığı aşılamasını tasvir eden tarihsiz illüstrasyon, 1796’da James Phipps’de yapıldı. GG Melingue tarafından yapılan bir resimden sonra. C: Bettmann
+                        Avrupalılar, 1492’de Amerika kıtasına ilk geldiklerinde bir dizi yeni hastalık getirdiler. Bunlardan biri, enfekte olanların yaklaşık %30’unu öldüren bulaşıcı çiçek hastalığıydı.
+                        
+                        Bu dönemde çiçek hastalığı, Amerika’da nüfusunun %90’ına yakın olan yaklaşık 20 milyon insanın canını aldı. Salgın, Avrupalılar’ın yeni boşalan alanları kolonize etmelerine ve geliştirmelerine yardımcı oldu, Amerikalılar’ın ve Avrupalı ​​işgalcilerin tarihini ve küresel ekonomiyi sonsuza dek değiştirdi.
+                        
+                        Örneğin, “Yeni Dünya”nın maden servetinin Latin Amerika’dan gümüş ve altın şeklinde sömürülmesi, İspanyol İmparatorluğu’nda büyük bir enflasyona yol açtı. Büyük ekonomik düşünür John Maynard Keynes 1930’da bu “fiyat devrimi”nin modern kapitalizmin oluşumunda önemli bir dönüm noktası olduğunu yazdı.</p>
+                    <hr>
+                    <h4 id="list-item-44">Kolera (1817-1823)</h4>
+                    <img src="images/salgıntarihce-img/Kolera.jpeg" width="600px" height="400px">
+                    <p>Hastalar Port-au-Prince, Haiti’deki Diquini Kolera Tedavi Merkezi’nde beklerken. C: Reuters
+                        İlk kolera salgını Hindistan’ın Jessore şehrinde başladı ve bölgenin büyük bir kısmından sonra da komşu bölgelere yayıldı. Milyonlarca insanı öldüren yedi büyük kolera salgından ilkiydi. John Snow adında bir doktor, yayılmasının nasıl önleneceği hakkında bazı şeyler biliyordu ve 1854’te Londra’nın Soho mahallesindeki belirli bir su pompasının kaynağını izole ederek salgını durdurdu.
+                        
+                        Dünya Sağlık Örgütü koleraya “unutulmuş salgın” adını verdi ve 1961’de başlayan yedinci salgının bugüne kadar devam ettiğini söyledi. Koleranın her yıl 1.3 milyon ila 4 milyon kişiye bulaştığı ve yıllık ölümlerin 21.000 ila 143.000 arasında değiştiği bildiriliyor.
+                        
+                        Kolera, belirli bir bakteri ile kontamine olmuş yiyecekten ya da sudan kaynaklandığından, aşırı servet eşitsizliği ve sosyal gelişim eksikliğinden etkilenen ülkelere ezici bir şekilde zarar veriyor. Kolera, dünyanın kendini en az savunabilecek kısımlarına zarar vererek dünyayı değiştirmeye devam ederken, daha zengin ülkeler bu hastalık için pek de endişeli değil.</p>
+                    <hr>
+                    <h4 id="list-item-55">İspanyol Gribi (1918-1919)</h4>
+                    <img src="images/salgıntarihce-img/H1N1.jpeg" width="600px" height="400px">
+                    <p>Oakland Belediye Konferans Salonu, 1918 yılında Kaliforniya, Oakland’da grip salgını sırasında Amerikan Kızıl Haçından gönüllü hemşirelerin yer aldığı geçici bir hastane olarak kullanıldı. C: Underwood Archives
+                        1918 influenza salgını olarak da bilinen İspanyol Gribi, 21. yüzyılın başlarında yaklaşık 500 milyon insanı veya dünya nüfusunun üçte birini enfekte eden bir H1N1 virüsünün patlak vermesi sonucunda ortaya çıktı. Salgın, dünya çapında 50 milyondan fazla insanın ölümünden sorumluydu.
+                        
+                        Salgın sırasında I. Dünya Savaşı sona ermişti ve halk sağlığı otoritelerinin, büyük etkisine katkıda bulunan viral salgınlarla başa çıkmak için hiçbir resmi protokolleri yoktu ya da bunlar yetersizdi.
+                        
+                        İlerleyen yıllarda, salgının nasıl gerçekleştiğini ve nasıl önlenebileceğini anlamaya yönelik araştırmalar, halk sağlığında iyileşmelere yol açtı ve daha sonra benzer grip benzeri virüs salgınlarının etkisini azaltmaya yardımcı oldu.</p>
+                    <hr>
+                    <h4 id="list-item-66">Hong Kong Gribi veya H3N2 (1968-1970)</h4>
+                    <img src="images/salgıntarihce-img/H3N2.jpeg" width="600px" height="400px">
+                    <p>2011’de CDC tarafından sağlanan, H3N2 grip virüsünü gösteren elektron mikroskop görüntüsü. C: Associated Press
+                        İspanyol Gribi’nden elli yıl sonra, başka bir grip virüsü H3N2 dünyaya yayıldı. Tahminlere göre, küresel ölümlerin sayısı yaklaşık bir milyon kişiyi kapsıyordu.
+                        
+                        1968 salgını 20. yüzyılda meydana gelen üçüncü grip salgını, diğer ikisi 1918’de İspanyol gribi ve 1957’de Asya gribi salgınıydı. Asya gribinden sorumlu olan virüsün, evrimleşip 10 yıl sonra bu sözde “Hong Kong gribi” adı verilen H3N2 salgınıyla tekrar ortaya çıktığına inanılıyor. Ancak 21. yüzyıl, grip salgınlarını görmeye devam edecekti.
+                        
+                        1918 influenza salgını kadar ölümcül olmasa da, H3N2 son derece bulaşıcıydı ve Hong Kong’da bildirilen ilk vakadan 2 hafta sonra 500.000 kişi enfekte oldu. Salgın, küresel sağlık topluluğunun, aşıların gelecekteki salgınları önlemedeki hayati rolünü anlamasına yardımcı oldu.</p>
+                    <hr>
+                    <h4 id="list-item-77">HIV / AIDS (1981-Günümüz)</h4>
+                    <img src="images/salgıntarihce-img/Aids.jpeg" width="600px" height="400px">
+                    <p>Dünya AIDS Günü’nden bir gün önce, Hindistan’da yapılan HIV/AIDS farkındalık gösterilerinden bir adam. C: Reuters
+                        Bilinen ilk HIV/AIDS vakaları 1981’de bildirildi, ancak hastalık bugün insanları enfekte etmeye ve öldürmeye devam ediyor. 1981’den bu yana 75 milyon insan HIV virüsüne yakalandı ve sonucunda yaklaşık 32 milyon insan öldü. Tedavisi olmayan, cinsel yolla bulaşan bir hastalık olarak HIV/AIDS, her yıl milyonlarca insanı etkilemeye devam eden inatçı bir salgın. AIDS’in tedavisinin olmamasına rağmen, antiretroviral tedavi ilaçları HIV’i kontrol edebilir ve ilerlemesini önemli ölçüde yavaşlatarak enfekte olmuş birinin uzun bir yaşam sürmesine izin verebilir.
+                        
+                        Basketbol süperstarı Magic Johnson, 1991’de NBA’den emekli olduğunda, o zamanlar HIV olduğunu halka açıklayan en ünlü isim olarak tarihe adını yazdı. Johnson, önde gelen bir iş adamı olmaya devam ediyor ve 2012’de Los Angeles Dodgers beyzbol takımını satın alan bir grubun partnerlerinden biriydi.
+                        
+                        HIV / AIDS’in küresel ekonomi üzerindeki olumsuz etkisi, özellikle HIV/AIDS vakalarının en büyük yüzdesine sahip olan Afrika’da halen araştırılıyor. 1980’lerde ve 90’larda, küresel LGBTQ topluluğu, hastalığın bu topluluğun üyeleri üzerindeki orantısız etkisi nedeniyle öne çıktı ve daha önce olmadığı kadar görünür hale geldi. HIV/AIDS ve homofobiye yönelik ilk ana akım filmlerden biri 1993 yılında vizyona giren Akademi Ödüllü “Philadelphia” idi.</p>
+                    <hr>
+                    <h4 id="list-item-88">SARS (2002-2003)</h4>
+                    <img src="images/salgıntarihce-img/Sars.jpeg" width="600px" height="400px">
+                    <p>23 Nisan 2003 Çarşamba günü Pekin Demiryolu İstasyonu’nda bilet almak için beklerken SARS virüsüne karşı koruma olarak insanlar maske takıyorlar. C: Greg Baker/ AP
+                        SARS veya şiddetli akut solunum sendromu, insanları enfekte edebilen 7 koronavirüsün birinden kaynaklanan bir hastalıktı. 2003 yılında, Çin’in Guangdong eyaletinden kaynaklanan bir salgın, toplam 26 ülkeye hızla yayıldığı ve 8.000’den fazla insanı enfekte ettiği ve 774 kişiyi öldürdüğü için küresel bir salgın olarak nitelendirildi.
+                        
+                        2003 SARS salgınının sonuçları, etkilenen alanları karantinaya almak ve enfekte olmuş bireyleri izole etmek de dahil olmak üzere küresel otoriteler tarafından yoğun bir halk sağlığı tepkisi nedeniyle büyük ölçüde sınırlıydı. Yeni 2019 koronavirüsü inceleyen bilim insanları, genetik yapısının SARS virüsüyle %86.9 aynı olduğunu keşfettiler ve yetkililer şimdi hükümetlerin 2003’teki sınırlama prosedürlerinden herhangi birini başarıyla kopyalayıp kopyalayamayacaklarını görmek için ikisini karşılaştırıyorlar.
+                        
+                        SARS salgını, özellikle halka açık yüzeylerin o zamandan beri düzenli olarak dezenfekte edildiği ve yüz maskeleriyle dolaşan insan manzaraları haline geldiği Hong Kong’da viral hastalık bulaşmasını önleme konusunda farkındalığı artırdı.</p>
+                    <hr>
+                    <h4 id="list-item-99">Domuz Gribi (2009-2010)</h4>
+                    <img src="images/salgıntarihce-img/DomuzGribi.jpeg" width="600px" height="400px">
+                    <p>Domuz Gribi’nin 2009 sonbaharında ABD’de yayılırken izlediği yolu gösteren bir harita. C: PLOS Computational Biology
+                        2009 yılında, ABD’de yaklaşık 60,8 milyon insanı enfekte eden ve 151.700 ila 575.400 aralığında küresel çapta ölüm yaratan yeni bir grip virüsü formu ortaya çıktı. Domuzlardan insanlara geçtiği görüldüğü için “domuz gribi” olarak adlandırıldı. H1N1, virüsle ilişkili ölümlerin %80’inin 65 yaşından küçük insanlarda meydana gelmesi nedeniyle tipik grip salgınlarından farklıydı. Genelde, grip salgınlarından ölümlerin %70 ila %90’ı 65 yaş üstünde görülür.
+                        
+                        H1N1, 21. yüzyılda bir viral salgının ne kadar hızlı yayılabileceğini gösterdi ve bu da küresel toplumun gelecekte daha hızlı tepki vermesi için ek hazırlıkların gerekli olduğunu gösterdi. Domuz gribinin bizlere bıraktığı önemli bir miras, gelişmiş sağlık sistemlerine sahip birçok ülkenin hızlı hareket eden, grip benzeri bir salgın karşısında nasıl ısrarlı bir şekilde çaresiz kalabildiklerini ortaya çıkarması olabilir.</p>
+                    <hr>
+                    <h4 id="list-item-101">Ebola (2014-2016)</h4>
+                    <img src="images/salgıntarihce-img/Ebola.jpeg" width="600px" height="400px">
+                    <p>Kongo’da işçiler bir Ebola kurbanını gömüyorlar. C: Jerome Delay/AP
+                        İlk salgına yakın bir nehir için adlandırılan Ebola virüsü, çoğu modern pandemiye kıyasla menzili sınırlıydı, ancak inanılmaz derecede ölümcül. 2014 yılında Gine’deki küçük bir köyde başladı ve Batı Afrika’daki birkaç komşu ülkeye yayıldı. Virüs 28.600 enfekte insanın 11.325’ini öldürdü, çoğu vaka Gine, Liberya ve Sierra Leone’de meydana geldi. CDC’ye göre, Ebola ile temas eden yapan sekiz Amerikalıdan biri öldü.
+                        
+                        Ebola’nın toplam 4.3 milyar dolara mal olduğu tahmin ediliyor ve gelen yatırımlar yukarıdaki üç ülkede önemli ölçüde düşüyor. “Unutulmuş salgın” kolera gibi, Ebola’nın da en çok zarar verdiği ülkeler, buna karşı savunmak için en az donanıma sahipti.</p>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="contact" style="background-color:#00a6a3;">
+        <div class="contact-form">
+      
+                <h4 style="color: black;text-align: center;">İletişim</h4>
+                <p style="color: black; text-align: center;" >Adres: Bilkent Yerleşkesi, Üniversiteler Mahallesi Dumlupınar Bulvarı 6001. Cadde No: 9 Çankaya/Ankara 06800
+                  Santral: +90 (312) 585 1000</p>
+      
+      
+            <ul>
+                <li ><a href="https://www.facebook.com/saglikbakanligi" target="_blank" title="Facebook"><i class="fab fa-facebook"></i> </a></li> 
+                <li><a href="https://www.youtube.com/user/SaglikBakanligi" target="_blank" title="Youtube"><i class="fab fa-youtube"></i> </a></li> 
+                <li><a href="https://twitter.com/saglikbakanligi" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/saglikbakanligi" target="_blank" title="İnstagram"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+      </footer>
+    <script>
+        function myFunction() {
+        var x = document.getElementById("mobile-navbar");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+        }
+    </script>
+      
+    
+</body>
+</html>
